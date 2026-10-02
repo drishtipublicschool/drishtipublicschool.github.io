@@ -1,308 +1,279 @@
-
-```html
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drishti Public School | Raghunathpur, Bhargama, Araria</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Font - Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            blue: '#0B3058',
-                            lightBlue: '#1E5088',
-                            gold: '#D4AF37',
-                            darkGold: '#B8860B',
-                            navy: '#05182E',
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        .hero-bg {
-            background: linear-gradient(rgba(5, 24, 46, 0.88), rgba(11, 48, 88, 0.88)), 
-                        url('https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Drishti Public School, Raghunathpur - quality education, activities and holistic development.">
+  <title>Drishti Public School | Raghunathpur</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="font-sans bg-gray-50 text-gray-800 antialiased flex flex-col min-h-screen">
-    <!-- Top Contact Bar -->
-    <div class="bg-brand-navy text-white text-xs sm:text-sm py-2 px-4 border-b border-blue-900/50">
-        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
-            <div class="flex flex-wrap items-center justify-center sm:justify-start gap-4">
-                <a href="tel:9709767598" class="hover:text-brand-gold transition flex items-center gap-1.5">
-                    <i class="fa-solid fa-phone text-brand-gold"></i> Director: +91 97097 67598
-                </a>
-                <a href="tel:8603116471" class="hover:text-brand-gold transition flex items-center gap-1.5">
-                    <i class="fa-solid fa-phone text-brand-gold"></i> Principal: +91 86031 16471
-                </a>
-            </div>
-            <div class="flex items-center gap-4">
-                <a href="mailto:dps.2k22@gmail.com" class="hover:text-brand-gold transition flex items-center gap-1.5">
-                    <i class="fa-solid fa-envelope text-brand-gold"></i> dps.2k22@gmail.com
-                </a>
-                <span class="hidden md:inline text-gray-500">|</span>
-                <span class="hidden md:inline text-brand-gold font-medium"><i class="fa-solid fa-location-dot"></i> Araria, Bihar</span>
-            </div>
-        </div>
-    </div>
-    <!-- Navigation Bar -->
-    <header class="sticky top-0 z-50 bg-white shadow-md">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <!-- Logo & Name -->
-                <a href="#" class="flex items-center gap-3 group">
-                    <img src="1000073480.jpg" alt="Drishti Public School Logo" class="w-14 h-14 sm:w-16 sm:h-16 object-contain rounded-full shadow-sm border border-gray-200">
-                    <div>
-                        <h1 class="text-lg sm:text-2xl font-extrabold text-brand-blue leading-tight tracking-tight group-hover:text-brand-lightBlue transition">
-                            DRISHTI PUBLIC SCHOOL
-                        </h1>
-                        <p class="text-xs text-brand-darkGold font-semibold tracking-wide">RAGHUNATHPUR • VISION • KNOWLEDGE • SERVICE</p>
-                    </div>
-                </a>
-                <!-- Desktop Navigation Links -->
-                <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold text-gray-700">
-                    <a href="#home" class="hover:text-brand-blue transition">Home</a>
-                    <a href="#about" class="hover:text-brand-blue transition">About Us</a>
-                    <a href="#management" class="hover:text-brand-blue transition">Management</a>
-                    <a href="#facilities" class="hover:text-brand-blue transition">Facilities</a>
-                    <a href="#academics" class="hover:text-brand-blue transition">Academics</a>
-                    <a href="#contact" class="hover:text-brand-blue transition">Contact Us</a>
-                </nav>
-                <!-- CTA Button -->
-                <div class="hidden sm:block">
-                    <a href="#admission" class="bg-brand-gold hover:bg-brand-darkGold text-white px-5 py-2.5 rounded-full font-bold shadow-md hover:shadow-lg transition transform hover:-translate-y-0.5 inline-block text-sm">
-                        Admission Inquiry
-                    </a>
-                </div>
-                <!-- Mobile Menu Button -->
-                <button id="menu-btn" class="lg:hidden text-gray-700 hover:text-brand-blue focus:outline-none p-2" aria-label="Toggle Navigation">
-                    <i class="fa-solid fa-bars text-2xl"></i>
-                </button>
-            </div>
-        </div>
-        <!-- Mobile Navigation Drawer -->
-        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-200 px-4 pt-2 pb-6 space-y-3 shadow-lg">
-            <a href="#home" class="mobile-link block py-2 text-gray-700 font-medium border-b border-gray-100">Home</a>
-            <a href="#about" class="mobile-link block py-2 text-gray-700 font-medium border-b border-gray-100">About Us</a>
-            <a href="#management" class="mobile-link block py-2 text-gray-700 font-medium border-b border-gray-100">Management</a>
-            <a href="#facilities" class="mobile-link block py-2 text-gray-700 font-medium border-b border-gray-100">Facilities</a>
-            <a href="#academics" class="mobile-link block py-2 text-gray-700 font-medium border-b border-gray-100">Academics</a>
-            <a href="#contact" class="mobile-link block py-2 text-gray-700 font-medium border-b border-gray-100">Contact Us</a>
-            <a href="#admission" class="mobile-link block w-full text-center bg-brand-gold text-white font-bold py-2.5 rounded-lg mt-2 shadow">
-                Admission Inquiry
-            </a>
-        </div>
-    </header>
-    <!-- Hero Banner Section -->
-    <section id="home" class="hero-bg text-white py-16 sm:py-24 px-4 relative">
-        <div class="max-w-5xl mx-auto text-center space-y-6">
-            <!-- Central Emblem -->
-            <div class="flex justify-center mb-2">
-                <img src="1000073480.jpg" alt="Drishti Public School Official Logo" class="w-28 h-28 sm:w-36 sm:h-36 rounded-full border-4 border-brand-gold shadow-2xl bg-white object-contain p-1">
-            </div>
-            <div class="inline-block bg-brand-gold text-white text-xs sm:text-sm font-extrabold px-4 py-1.5 rounded-full uppercase tracking-wider shadow-lg">
-                🎓 Admissions Open for Session 2026-27 (Nursery to 8th)
-            </div>
-            <h2 class="text-3xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-tight">
-                Drishti Public School <br/>
-                <span class="text-brand-gold">Vision • Knowledge • Service</span>
-            </h2>
-            <p class="text-base sm:text-lg lg:text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed font-light">
-                Providing high-quality English medium education with modern Computer Lab, Library, and secure Hostel facilities in Raghunathpur, Bhargama, Araria.
-            </p>
-            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 pt-4">
-                <a href="#admission" class="w-full sm:w-auto bg-brand-gold hover:bg-brand-darkGold text-white font-bold px-8 py-3.5 rounded-xl shadow-lg hover:shadow-xl transition transform hover:-translate-y-0.5 text-center">
-                    Apply For Admission
-                </a>
-                <a href="#about" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 font-bold px-8 py-3.5 rounded-xl transition text-center">
-                    Explore Facilities
-                </a>
-            </div>
-        </div>
-    </section>
-    <!-- Notice Ticker -->
-    <div class="bg-brand-blue text-white py-3 px-4 shadow-md flex items-center border-t border-brand-gold">
-        <div class="max-w-7xl mx-auto w-full flex flex-col sm:flex-row items-center gap-3">
-            <span class="bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase whitespace-nowrap animate-pulse">
-                Announcement
-            </span>
-            <div class="overflow-hidden w-full text-center sm:text-left text-sm font-medium text-gray-100">
-                Admission inquiries open for English Medium classes from Nursery to Class 8th. Hostel facility available! Contact Director: 9709767598 | Principal: 8603116471.
-            </div>
-        </div>
-    </div>
-    <!-- About Section -->
-    <section id="about" class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div class="space-y-5">
-                    <div class="inline-flex items-center gap-2 bg-blue-50 text-brand-blue px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
-                        <i class="fa-solid fa-school"></i> About Our Institution
-                    </div>
-                    <h3 class="text-3xl sm:text-4xl font-extrabold text-gray-900 leading-tight">
-                        Welcome to Drishti Public School, Raghunathpur
-                    </h3>
-                    <p class="text-gray-600 leading-relaxed text-sm sm:text-base">
-                        Established with a core motto of <strong>Vision, Knowledge, and Service</strong>, Drishti Public School is committed to bringing high-standard English medium education to students in Ward-12, Raghunathpur, Bhargama (Araria).
-                    </p>
-                    <p class="text-gray-600 leading-relaxed text-sm sm:text-base">
-                        We blend traditional discipline with modern learning techniques, offering state-of-the-art computer education, an extensive library, and full residential hostel support for all-round development.
-                    </p>
-                    <div class="grid grid-cols-2 gap-4 pt-2">
-                        <div class="p-4 rounded-xl bg-gray-50 border border-gray-100 text-center">
-                            <span class="block text-2xl font-black text-brand-blue">Nursery - 8th</span>
-                            <span class="text-xs text-gray-500 font-medium">Class Range</span>
-                        </div>
-                        <div class="p-4 rounded-xl bg-gray-50 border border-gray-100 text-center">
-                            <span class="block text-2xl font-black text-brand-gold">English</span>
-                            <span class="text-xs text-gray-500 font-medium">Instruction Medium</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex justify-center">
-                    <div class="relative p-6 bg-gradient-to-tr from-brand-blue to-brand-navy rounded-3xl shadow-2xl text-center text-white max-w-md w-full">
-                        <img src="1000073480.jpg" alt="Drishti Public School Seal" class="w-48 h-48 mx-auto rounded-full border-4 border-brand-gold shadow-xl bg-white object-contain p-2 mb-4">
-                        <h4 class="text-xl font-bold text-brand-gold">DRISHTI PUBLIC SCHOOL</h4>
-                        <p class="text-xs text-gray-300 mt-1">Raghunathpur, Bhargama, Araria, Bihar (854334)</p>
-                        <p class="text-xs italic text-gray-400 mt-3">"Inspiring excellence in every child through Vision, Knowledge & Service."</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Management Section -->
-    <section id="management" class="py-16 bg-gray-50 border-t border-b border-gray-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-12">
-                <h2 class="text-xs font-bold text-brand-blue uppercase tracking-widest mb-1">Leadership & Vision</h2>
-                <h3 class="text-3xl font-extrabold text-gray-900">Message From Management</h3>
-                <div class="w-20 h-1 bg-brand-gold mx-auto mt-3 rounded-full"></div>
-            </div>
-            <div class="grid md:grid-cols-2 gap-10 lg:gap-12">
-                <!-- Director Card -->
-                <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-md border border-gray-100 hover:shadow-xl transition flex flex-col items-center text-center">
-                    <div class="relative mb-6">
-                        <div class="w-40 h-40 rounded-full overflow-hidden border-4 border-brand-blue shadow-lg">
-                            <img src="1000073512.jpg" alt="Er. Dilip Kumar - Director" class="w-full h-full object-cover object-top" onerror="this.src='https://placehold.co/300x300/0B3058/ffffff?text=Er.+Dilip+Kumar'">
-                        </div>
-                        <span class="absolute bottom-0 right-0 bg-brand-gold text-white text-xs font-bold px-3 py-1 rounded-full shadow">
-                            Director
-                        </span>
-                    </div>
-                    <h4 class="text-2xl font-bold text-gray-900">Er. Dilip Kumar</h4>
-                    <p class="text-sm font-semibold text-brand-blue mb-4">Mechanical Engineering</p>
-                    <p class="text-gray-600 italic text-sm leading-relaxed mb-6">
-                        "At Drishti Public School, our aim is to combine technical precision, technological literacy, and sound values. We ensure standard English medium education in a disciplined and safe environment where young students excel analytically and socially."
-                    </p>
-                    <div class="mt-auto w-full pt-4 border-t border-gray-100 flex justify-center items-center gap-2 text-sm text-gray-700">
-                        <i class="fa-solid fa-phone text-brand-blue"></i>
-                        <a href="tel:9709767598" class="font-bold hover:text-brand-blue transition">+91 97097 67598</a>
-                    </div>
-                </div>
-                <!-- Principal Card -->
-                <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-md border border-gray-100 hover:shadow-xl transition flex flex-col items-center text-center">
-                    <div class="relative mb-6">
-                        <div class="w-40 h-40 rounded-full overflow-hidden border-4 border-brand-gold shadow-lg">
-                            <img src="1000073513_2.jpg" alt="Dipsheela Kumari - Principal" class="w-full h-full object-cover object-top" onerror="this.src='1000073513.jpg'">
-                        </div>
-                        <span class="absolute bottom-0 right-0 bg-brand-blue text-white text-xs font-bold px-3 py-1 rounded-full shadow">
-                            Principal
-                        </span>
-                    </div>
-                    <h4 class="text-2xl font-bold text-gray-900">Dipsheela Kumari</h4>
-                    <p class="text-sm font-semibold text-brand-darkGold mb-4">Bachelor of Arts (B.A.)</p>
-                    <p class="text-gray-600 italic text-sm leading-relaxed mb-6">
-                        "Education is about character development and curiosity. We are committed to nurturing every learner from Nursery to Class 8th with personalized care, moral ethics, and standard academic foundation for a bright future."
-                    </p>
-                    <div class="mt-auto w-full pt-4 border-t border-gray-100 flex justify-center items-center gap-2 text-sm text-gray-700">
-                        <i class="fa-solid fa-phone text-brand-blue"></i>
-                        <a href="tel:8603116471" class="font-bold hover:text-brand-blue transition">+91 86031 16471</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Facilities Section -->
-    <section id="facilities" class="py-16 bg-blue-50/50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-12">
-                <h2 class="text-xs font-bold text-brand-blue uppercase tracking-widest mb-1">Campus Life & Infrastructure</h2>
-                <h3 class="text-3xl font-extrabold text-gray-900">Key Facilities Provided</h3>
-                <p class="text-gray-600 mt-2 text-sm">Designed for safety, digital learning, and comprehensive growth.</p>
-                <div class="w-20 h-1 bg-brand-gold mx-auto mt-3 rounded-full"></div>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Facility 1: Hostel -->
-                <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition border border-gray-100">
-                    <div class="w-14 h-14 bg-blue-100 text-brand-blue rounded-xl flex items-center justify-center text-2xl mb-5">
-                        <i class="fa-solid fa-hotel"></i>
-                    </div>
-                    <h4 class="text-xl font-bold text-gray-900 mb-2">Hostel Facility</h4>
-                    <p class="text-gray-600 text-sm leading-relaxed">
-                        Safe and disciplined boarding facility for outstation and resident students with nutritious food, study routines, and full-time supervision.
-                    </p>
-                </div>
-                <!-- Facility 2: Computer Lab -->
-                <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition border border-gray-100">
-                    <div class="w-14 h-14 bg-amber-100 text-brand-gold rounded-xl flex items-center justify-center text-2xl mb-5">
-                        <i class="fa-solid fa-desktop"></i>
-                    </div>
-                    <h4 class="text-xl font-bold text-gray-900 mb-2">Computer Lab</h4>
-                    <p class="text-gray-600 text-sm leading-relaxed">
-                        Modern computer lab designed to equip young minds with essential computer literacy, typing skills, and digital knowledge from early classes.
-                    </p>
-                </div>
-                <!-- Facility 3: Library -->
-                <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition border border-gray-100">
-                    <div class="w-14 h-14 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center text-2xl mb-5">
-                        <i class="fa-solid fa-book-open"></i>
-                    </div>
-                    <h4 class="text-xl font-bold text-gray-900 mb-2">School Library</h4>
-                    <p class="text-gray-600 text-sm leading-relaxed">
-                        A curated collection of children's literature, reference books, encyclopedias, and subject resources to foster strong reading habits.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Admission Form Section -->
-    <section id="admission" class="py-16 bg-brand-navy text-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-white rounded-3xl p-6 sm:p-10 text-gray-900 shadow-2xl">
-                <div class="text-center mb-8">
-                    <span class="bg-brand-gold/20 text-brand-darkGold text-xs font-extrabold px-3 py-1 rounded-full uppercase">Academic Year 2026-27</span>
-                    <h3 class="text-3xl font-extrabold mt-2 text-brand-blue">Admission Inquiry Form</h3>
-                    <p class="text-gray-500 text-sm mt-1">Submit student details to receive callback for admission process.</p>
-                </div>
-                <div id="form-alert" class="hidden mb-6 p-4 rounded-xl text-sm font-semibold"></div>
-                <form id="inquiryForm" class="space-y-4">
-                    <div class="grid sm:grid-cols-2 gap-4">
-                        <div>
-                            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Student's Full Name *</label>
-                            <input type="text" id="studentName" required placeholder="e.g. Aman Kumar" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-blue text-sm">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Parent/Guardian Mobile *</label>
-                            <input type="tel" id="parentPhone" required placeholder="10 Digit Mobile Number" pattern="[0-9]{10}" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-blue text-sm">
-                        </div>
-                    </div>
-                    <div class="grid sm:grid-cols-2 gap-4">
-                        <div>
-                            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Class Applying For *</label>
-                            <select id="targetClass" required class="w-full px-4 py
-```
+<body>
+
+<header class="site-header">
+  <div class="topbar">
+    <div>📍 Raghunathpur, Bhargama, Araria, Bihar</div>
+    <div>✉️ dps.2k22@gmail.com</div>
+  </div>
+  <nav class="navbar container">
+    <a class="brand" href="#home">
+      <img src="school-logo.jpg" alt="Drishti Public School Logo" onerror="this.style.display='none'">
+      <span><strong>DRISHTI PUBLIC SCHOOL</strong><small>Raghunathpur, Araria</small></span>
+    </a>
+    <button class="menu-toggle" aria-label="Open menu">☰</button>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#leadership">Leadership</a>
+      <a href="#facilities">Facilities</a>
+      <a href="#events">Events</a>
+      <a href="#gallery">Gallery</a>
+      <a class="nav-admission" href="#admission">Admission</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <div class="hero-copy">
+      <span class="eyebrow">WELCOME TO</span>
+      <h1>Drishti Public School</h1>
+      <p>Raghunathpur, Bhargama, Araria, Bihar</p>
+      <p class="hero-text">A nurturing environment for learning, confidence, creativity and character.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#admission">Online Admission</a>
+        <a class="btn light" href="#about">Explore School</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="quick-stats">
+  <div class="container stats-grid">
+    <div class="stat"><strong class="counter" data-target="4">0</strong><span>Core Focus Areas</span></div>
+    <div class="stat"><strong class="counter" data-target="2">0</strong><span>School Leaders</span></div>
+    <div class="stat"><strong class="counter" data-target="4">0</strong><span>Gallery Highlights</span></div>
+    <div class="stat"><strong class="counter" data-target="6">0</strong><span>Website Sections</span></div>
+  </div>
+</section>
+
+<section class="section notice-section">
+  <div class="container notice-grid">
+    <div class="section-heading">
+      <span class="eyebrow dark">SCHOOL UPDATES</span>
+      <h2>Notice Board</h2>
+      <p>Important school updates and announcements.</p>
+    </div>
+    <div class="notice-board">
+      <div class="notice-item"><span class="notice-tag">NOTICE</span><div><h3>Admission Enquiry Open</h3><p>Parents can use the online admission enquiry form for school information.</p></div></div>
+      <div class="notice-item"><span class="notice-tag">UPDATE</span><div><h3>School Activities</h3><p>Academic, cultural and co-curricular activities are an important part of school life.</p></div></div>
+      <div class="notice-item"><span class="notice-tag">INFO</span><div><h3>Parent Communication</h3><p>For direct enquiries, contact the school leadership team below.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section about">
+  <div class="container two-col">
+    <div class="about-image"><img src="gate.jpg" alt="Drishti Public School campus gate" onerror="this.src='classroom.jpg'"></div>
+    <div class="about-content">
+      <span class="eyebrow dark">ABOUT OUR SCHOOL</span>
+      <h2>Learning with values, confidence and care</h2>
+      <p>Drishti Public School aims to provide a positive learning environment where students can develop knowledge, creativity, discipline and confidence.</p>
+      <div class="feature-list">
+        <div><span>✓</span><b>Academic Learning</b><small>Focus on strong foundations and understanding.</small></div>
+        <div><span>✓</span><b>Holistic Development</b><small>Encouraging activities beyond the classroom.</small></div>
+        <div><span>✓</span><b>Values & Discipline</b><small>Promoting responsible and respectful behaviour.</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section principal-message">
+  <div class="container message-card">
+    <div class="message-photo"><img src="Principal.jpg" alt="Principal Dipsheela Kumari" onerror="this.src='school-logo.jpg'"></div>
+    <div class="message-body">
+      <span class="eyebrow dark">PRINCIPAL'S MESSAGE</span>
+      <h2>Welcome to Drishti Public School</h2>
+      <p>We believe that every child deserves an encouraging environment in which learning becomes meaningful and enjoyable. Our focus is to support students in developing knowledge, confidence, good values and a responsible attitude.</p>
+      <p class="signature">— Dipsheela Kumari<br><span>Principal</span></p>
+    </div>
+  </div>
+</section>
+
+<section id="leadership" class="section leadership">
+  <div class="container">
+    <div class="section-heading center">
+      <span class="eyebrow dark">SCHOOL LEADERSHIP</span>
+      <h2>Meet Our Leadership</h2>
+      <p>Connect directly with the school leadership team.</p>
+    </div>
+    <div class="leader-grid">
+      <article class="leader-card">
+        <img src="Principal.jpg" alt="Dipsheela Kumari, Principal" onerror="this.src='school-logo.jpg'">
+        <div class="leader-info">
+          <span class="role">PRINCIPAL</span>
+          <h3>Dipsheela Kumari</h3>
+          <p>Principal, Drishti Public School</p>
+          <div class="phone-row">📱 <strong>8603116471</strong></div>
+          <a class="call-btn" href="tel:+918603116471">📞 Call Now</a>
+        </div>
+      </article>
+
+      <article class="leader-card">
+        <img src="director.jpg" alt="Er. Dilip Kumar, Director" onerror="this.src='school-logo.jpg'">
+        <div class="leader-info">
+          <span class="role">DIRECTOR</span>
+          <h3>Er. Dilip Kumar</h3>
+          <p>Director, Drishti Public School</p>
+          <div class="phone-row">📱 <strong>9709767598</strong></div>
+          <a class="call-btn" href="tel:+919709767598">📞 Call Now</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="facilities" class="section facilities">
+  <div class="container">
+    <div class="section-heading center">
+      <span class="eyebrow dark">WHY OUR SCHOOL</span>
+      <h2>Learning & Activities</h2>
+    </div>
+    <div class="card-grid">
+      <div class="info-card"><span>📚</span><h3>Classroom Learning</h3><p>Student-focused learning with attention to understanding and participation.</p></div>
+      <div class="info-card"><span>⚽</span><h3>Sports & Activities</h3><p>Opportunities for activity, teamwork and healthy development.</p></div>
+      <div class="info-card"><span>🌱</span><h3>Environment & Values</h3><p>Encouraging cleanliness, responsibility and care for the surroundings.</p></div>
+      <div class="info-card"><span>🎨</span><h3>Creative Development</h3><p>Encouraging creativity, expression and confidence in students.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="events" class="section events">
+  <div class="container">
+    <div class="section-heading center">
+      <span class="eyebrow dark">NEWS & EVENTS</span>
+      <h2>School Highlights</h2>
+    </div>
+    <div class="event-grid">
+      <article class="event-card"><img src="classroom.jpg" alt="Classroom activity"><div><span>ACADEMICS</span><h3>Learning Highlights</h3><p>Classroom learning that supports curiosity, participation and strong foundations.</p></div></article>
+      <article class="event-card"><img src="playground.jpg" alt="School playground"><div><span>ACTIVITIES</span><h3>Sports & Outdoor Activities</h3><p>Outdoor activities that encourage teamwork, confidence and participation.</p></div></article>
+      <article class="event-card"><img src="gate.jpg" alt="School campus"><div><span>CAMPUS</span><h3>School Campus</h3><p>A welcoming campus environment for students, teachers and parents.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" class="section gallery-section">
+  <div class="container">
+    <div class="section-heading center">
+      <span class="eyebrow dark">PHOTO GALLERY</span>
+      <h2>School in Pictures</h2>
+    </div>
+    <div class="slider">
+      <button class="slider-btn prev" aria-label="Previous photo">‹</button>
+      <div class="slides">
+        <div class="slide active"><img src="gate.jpg" alt="School gate"></div>
+        <div class="slide"><img src="classroom.jpg" alt="Classroom"></div>
+        <div class="slide"><img src="playground.jpg" alt="Playground"></div>
+        <div class="slide"><img src="school-logo.jpg" alt="School logo"></div>
+      </div>
+      <button class="slider-btn next" aria-label="Next photo">›</button>
+      <div class="dots" aria-label="Gallery navigation"></div>
+    </div>
+  </div>
+</section>
+
+<section id="admission" class="section admission">
+  <div class="container admission-grid">
+    <div>
+      <span class="eyebrow">ONLINE ADMISSION</span>
+      <h2>Start your admission enquiry</h2>
+      <p>Fill in the form and the school can contact you using the details provided.</p>
+      <div class="admission-contact">
+        <a href="tel:+919709767598">📞 Director: 9709767598</a>
+        <a href="tel:+918603116471">📞 Principal: 8603116471</a>
+      </div>
+    </div>
+    <form id="admissionForm" class="admission-form">
+      <input type="text" name="parentName" placeholder="Parent / Guardian Name" required>
+      <input type="text" name="studentName" placeholder="Student Name" required>
+      <input type="tel" name="phone" placeholder="Mobile Number" required>
+      <select name="class" required>
+        <option value="">Select Class</option>
+        <option>Nursery</option><option>LKG</option><option>UKG</option>
+        <option>Class 1</option><option>Class 2</option><option>Class 3</option>
+        <option>Class 4</option><option>Class 5</option><option>Class 6</option>
+        <option>Class 7</option><option>Class 8</option><option>Class 9</option>
+        <option>Class 10</option>
+      </select>
+      <textarea name="message" rows="4" placeholder="Message / Enquiry"></textarea>
+      <button class="btn primary" type="submit">Submit Enquiry</button>
+      <p id="formMessage" class="form-message"></p>
+      <small>This is a front-end enquiry form. Connect a form service or backend to receive submissions online.</small>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div><h3>Drishti Public School</h3><p>Raghunathpur, Bhargama, Araria, Bihar</p></div>
+    <div><h4>Contact</h4><p>📞 9709767598</p><p>✉️ dps.2k22@gmail.com</p></div>
+    <div><h4>Quick Links</h4><a href="#admission">Admission</a><a href="#gallery">Gallery</a><a href="#leadership">Leadership</a></div>
+  </div>
+  <div class="copyright">© <span id="year"></span> Drishti Public School. All Rights Reserved.</div>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/919709767598?text=Hello%20Drishti%20Public%20School%2C%20I%20want%20to%20know%20about%20admission." target="_blank" rel="noopener" aria-label="WhatsApp Enquiry">💬 WhatsApp Enquiry</a>
+
+<script>
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+menuToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+const counters = document.querySelectorAll('.counter');
+const counterObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    const el = entry.target, target = Number(el.dataset.target);
+    let n = 0;
+    const step = Math.max(1, Math.ceil(target / 25));
+    const timer = setInterval(() => {
+      n += step;
+      if (n >= target) { n = target; clearInterval(timer); }
+      el.textContent = n;
+    }, 45);
+    counterObserver.unobserve(el);
+  });
+}, {threshold: .5});
+counters.forEach(c => counterObserver.observe(c));
+
+const slides = [...document.querySelectorAll('.slide')];
+const dotsBox = document.querySelector('.dots');
+let current = 0;
+slides.forEach((_, i) => {
+  const dot = document.createElement('button');
+  dot.setAttribute('aria-label', 'Go to photo ' + (i + 1));
+  dot.addEventListener('click', () => showSlide(i));
+  dotsBox.appendChild(dot);
+});
+function showSlide(i) {
+  current = (i + slides.length) % slides.length;
+  slides.forEach((s, n) => s.classList.toggle('active', n === current));
+  [...dotsBox.children].forEach((d, n) => d.classList.toggle('active', n === current));
+}
+document.querySelector('.prev').addEventListener('click', () => showSlide(current - 1));
+document.querySelector('.next').addEventListener('click', () => showSlide(current + 1));
+showSlide(0);
+setInterval(() => showSlide(current + 1), 4500);
+
+document.getElementById('admissionForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  document.getElementById('formMessage').textContent = 'Thank you! Your enquiry has been prepared. Please connect a form service/backend to receive submissions.';
+  this.reset();
+});
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
