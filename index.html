@@ -1,1749 +1,1286 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+<title>Drishti Public School | Raghunathpur, Araria</title>
 
 <meta name="description"
-      content="Drishti Public School, Raghunathpur, Bhargama, Araria, Bihar">
+content="Drishti Public School, Ward 12, Raghunathpur, Bhargama, Araria, Bihar. Vision • Knowledge • Service.">
 
-<title>Drishti Public School | Raghunathpur</title>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
 
-<link rel="stylesheet" href="style.css?v=5">
+:root{
+    --primary:#123c69;
+    --secondary:#f4b942;
+    --dark:#102a43;
+    --light:#f7f9fc;
+    --white:#ffffff;
+    --text:#334e68;
+    --shadow:0 10px 30px rgba(16,42,67,.12);
+    --radius:18px;
+}
 
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:var(--light);
+    color:var(--text);
+    line-height:1.7;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+.container{
+    width:min(1120px,92%);
+    margin:auto;
+}
+
+/* TOP BAR */
+.topbar{
+    background:var(--dark);
+    color:#fff;
+    padding:8px 0;
+    font-size:14px;
+}
+
+.topbar .container{
+    display:flex;
+    justify-content:space-between;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+/* HEADER */
+header{
+    background:#fff;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 3px 15px rgba(0,0,0,.08);
+}
+
+.navbar{
+    min-height:78px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.brand img{
+    width:58px;
+    height:58px;
+    object-fit:contain;
+    border-radius:50%;
+}
+
+.brand-text h1{
+    color:var(--primary);
+    font-size:21px;
+    line-height:1.2;
+}
+
+.brand-text span{
+    font-size:12px;
+    color:#687b8f;
+}
+
+nav{
+    display:flex;
+    align-items:center;
+    gap:22px;
+}
+
+nav a{
+    font-weight:600;
+    font-size:14px;
+    color:var(--dark);
+    transition:.25s;
+}
+
+nav a:hover{
+    color:var(--secondary);
+}
+
+.menu-btn{
+    display:none;
+    border:0;
+    background:var(--primary);
+    color:#fff;
+    padding:9px 12px;
+    border-radius:8px;
+    font-size:20px;
+}
+
+/* HERO */
+.hero{
+    min-height:620px;
+    display:flex;
+    align-items:center;
+    text-align:center;
+    color:#fff;
+    background:
+      linear-gradient(rgba(8,35,60,.82),rgba(8,35,60,.82)),
+      url("gate.jpg.jpg") center/cover no-repeat;
+}
+
+.hero-content{
+    width:min(850px,94%);
+    margin:auto;
+}
+
+.hero-logo{
+    width:105px;
+    height:105px;
+    object-fit:contain;
+    margin:0 auto 20px;
+    background:#fff;
+    padding:8px;
+    border-radius:50%;
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+
+.hero .welcome{
+    color:var(--secondary);
+    font-weight:700;
+    letter-spacing:3px;
+    font-size:14px;
+}
+
+.hero h2{
+    font-size:clamp(34px,6vw,64px);
+    line-height:1.1;
+    margin:12px 0;
+}
+
+.hero p{
+    font-size:17px;
+    max-width:700px;
+    margin:12px auto;
+}
+
+.tagline{
+    font-weight:bold;
+    color:#ffd76b;
+    letter-spacing:2px;
+}
+
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    gap:14px;
+    flex-wrap:wrap;
+    margin-top:28px;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 22px;
+    border-radius:30px;
+    font-weight:bold;
+    transition:.25s;
+}
+
+.btn-primary{
+    background:var(--secondary);
+    color:#172b4d;
+}
+
+.btn-outline{
+    border:2px solid #fff;
+    color:#fff;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+/* SECTIONS */
+section{
+    padding:75px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:42px;
+}
+
+.section-title span{
+    color:#d79a13;
+    font-weight:bold;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-size:13px;
+}
+
+.section-title h2{
+    color:var(--primary);
+    font-size:34px;
+    margin-top:5px;
+}
+
+.section-title p{
+    max-width:680px;
+    margin:8px auto 0;
+}
+
+/* ABOUT */
+.about-grid{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:30px;
+    align-items:center;
+}
+
+.card{
+    background:#fff;
+    border-radius:var(--radius);
+    padding:30px;
+    box-shadow:var(--shadow);
+}
+
+.about-image{
+    border-radius:var(--radius);
+    overflow:hidden;
+    box-shadow:var(--shadow);
+}
+
+.about-image img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+}
+
+.about-list{
+    margin-top:20px;
+    list-style:none;
+}
+
+.about-list li{
+    padding:8px 0;
+    border-bottom:1px solid #edf1f5;
+}
+
+/* LEADERSHIP */
+.leader-section{
+    background:#eef4f9;
+}
+
+.leader-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+.leader-card{
+    background:#fff;
+    padding:30px;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    text-align:center;
+    border-top:5px solid var(--secondary);
+}
+
+.leader-card img{
+    width:170px;
+    height:170px;
+    object-fit:cover;
+    border-radius:50%;
+    margin:0 auto 18px;
+    border:6px solid #edf4fa;
+}
+
+.leader-card .role{
+    display:inline-block;
+    color:#fff;
+    background:var(--primary);
+    padding:5px 15px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:bold;
+}
+
+.leader-card h3{
+    color:var(--dark);
+    font-size:23px;
+    margin:10px 0 3px;
+}
+
+.phone{
+    color:var(--primary);
+    font-weight:bold;
+    margin-top:10px;
+}
+
+/* FEATURES */
+.features{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.feature{
+    background:#fff;
+    padding:27px;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    transition:.25s;
+}
+
+.feature:hover{
+    transform:translateY(-5px);
+}
+
+.feature-icon{
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+.feature h3{
+    color:var(--primary);
+    margin-bottom:7px;
+}
+
+/* CAMPUS */
+.campus{
+    background:#fff;
+}
+
+.campus-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.campus-card{
+    overflow:hidden;
+    border-radius:16px;
+    box-shadow:var(--shadow);
+}
+
+.campus-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.campus-card div{
+    padding:15px;
+    font-weight:bold;
+    color:var(--primary);
+}
+
+/* ADMISSION */
+.admission{
+    background:
+      linear-gradient(rgba(18,60,105,.94),rgba(18,60,105,.94)),
+      url("classroom.jpg.jpg") center/cover;
+    color:#fff;
+}
+
+.admission-box{
+    max-width:800px;
+    margin:auto;
+    text-align:center;
+}
+
+.admission h2{
+    font-size:38px;
+    margin-bottom:12px;
+}
+
+.admission p{
+    margin-bottom:22px;
+}
+
+/* CONTACT */
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+.contact-card{
+    background:#fff;
+    padding:28px;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+}
+
+.contact-card h3{
+    color:var(--primary);
+    margin-bottom:12px;
+}
+
+.contact-item{
+    padding:9px 0;
+    border-bottom:1px solid #edf1f5;
+}
+
+/* FOOTER */
+footer{
+    background:#0b2239;
+    color:#dce6ef;
+    padding:40px 0 20px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:1.4fr 1fr 1fr;
+    gap:30px;
+}
+
+footer h3{
+    color:#fff;
+    margin-bottom:12px;
+}
+
+.footer-bottom{
+    border-top:1px solid rgba(255,255,255,.15);
+    margin-top:30px;
+    padding-top:18px;
+    text-align:center;
+    font-size:13px;
+}
+
+/* WHATSAPP */
+.whatsapp{
+    position:fixed;
+    right:18px;
+    bottom:18px;
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#25d366;
+    color:#fff;
+    font-size:27px;
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
+    z-index:2000;
+}
+
+/* MOBILE */
+@media(max-width:850px){
+
+    nav{
+        display:none;
+        position:absolute;
+        left:0;
+        right:0;
+        top:78px;
+        background:#fff;
+        flex-direction:column;
+        padding:20px;
+        box-shadow:0 10px 20px rgba(0,0,0,.1);
+    }
+
+    nav.show{
+        display:flex;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .about-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .features{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .campus-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:600px){
+
+    .topbar .container{
+        justify-content:center;
+        text-align:center;
+    }
+
+    .brand-text h1{
+        font-size:17px;
+    }
+
+    .brand img{
+        width:48px;
+        height:48px;
+    }
+
+    .hero{
+        min-height:570px;
+    }
+
+    .hero h2{
+        font-size:36px;
+    }
+
+    section{
+        padding:55px 0;
+    }
+
+    .section-title h2{
+        font-size:29px;
+    }
+
+    .leader-grid,
+    .features,
+    .campus-grid,
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .leader-card{
+        padding:24px 18px;
+    }
+
+    .about-image img{
+        height:260px;
+    }
+}
+</style>
 </head>
-
 
 <body>
 
-<!-- ================= HEADER ================= -->
+<!-- TOP BAR -->
+<div class="topbar">
+    <div class="container">
+        <span>
+            📍 Ward 12, Raghunathpur, Bhargama, Araria, Bihar – 854334
+        </span>
 
-<header class="topbar">
+        <span>
+            📞 8603116471 &nbsp; | &nbsp; 9709767598
+        </span>
+    </div>
+</div>
 
-  <div class="container nav">
+<!-- HEADER -->
+<header>
+    <div class="container navbar">
 
-    <a class="brand" href="#home">
+        <a href="#" class="brand">
 
-      <img src="school-logo.jpg.jpg"
-           alt="Drishti Public School Logo">
+            <img src="school-logo.jpg.jpg"
+                 alt="Drishti Public School Logo">
 
-      <span>Drishti Public School</span>
+            <div class="brand-text">
+                <h1>Drishti Public School</h1>
+                <span>Vision • Knowledge • Service</span>
+            </div>
 
-    </a>
+        </a>
 
+        <button class="menu-btn"
+                onclick="toggleMenu()">
+            ☰
+        </button>
 
-    <button class="menu"
-        id="menuButton"
-        aria-label="Open menu"
-        aria-expanded="false">
-  ☰
-    </button>
+        <nav id="nav">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#leadership">Leadership</a>
+            <a href="#features">Features</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#admission">Admission</a>
+            <a href="#contact">Contact</a>
+        </nav>
 
-
-    <nav>
-
-      <a href="#home">Home</a>
-
-      <a href="#about">About</a>
-
-      <a href="#facilities">Facilities</a>
-
-      <a href="#admission">Enquiry</a>
-
-      <a href="#gallery">Gallery</a>
-
-      <a href="#contact">Contact</a>
-
-    </nav>
-
-  </div>
-
+    </div>
 </header>
 
+<!-- HERO -->
+<section class="hero" id="home">
 
+    <div class="hero-content">
 
-<main>
+        <img class="hero-logo"
+             src="school-logo.jpg.jpg"
+             alt="Drishti Public School">
 
+        <div class="welcome">
+            WELCOME TO
+        </div>
 
-<!-- ================= HOME ================= -->
-
-<section id="home" class="hero">
-
-  <div class="hero-bg"></div>
-
-
-  <div class="container hero-content">
-
-    <img class="hero-logo"
-         src="school-logo.jpg.jpg"
-         alt="Drishti Public School Logo">
-
-
-    <p class="eyebrow">
-      WELCOME TO
-    </p>
-
-
-    <h1>
-      Drishti Public School
-    </h1>
-
-
-    <p class="lead">
-      Ward 12, Raghunathpur, Bhargama,
-      Araria, Bihar – 854334
-    </p>
-
-
-    <p class="tagline">
-      Vision • Knowledge • Service
-    </p>
-
-
-    <div class="actions">
-
-      <a class="btn primary"
-         href="#admission">
-        🎓 Admission Enquiry
-      </a>
-
-
-      <a class="btn light"
-         href="tel:+918603116471">
-        📞 Call School
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- ================= ABOUT ================= -->
-
-<section id="about"
-         class="section">
-
-  <div class="container">
-
-    <div class="section-title">
-
-      <span>ABOUT US</span>
-
-      <h2>
-        Learning with values and vision
-      </h2>
-
-      <p>
-        A caring environment for quality education,
-        discipline and overall development.
-      </p>
-
-    </div>
-
-
-    <div class="about-grid">
-
-
-      <div>
+        <h2>
+            Drishti Public School
+        </h2>
 
         <p>
-          <strong>Drishti Public School</strong> is located at
-          Raghunathpur, Bhargama, Araria, Bihar.
-          The school provides education from
-          <strong>Nursery to Class 8</strong>.
+            Empowering young minds with quality education,
+            discipline, knowledge and values for a brighter future.
         </p>
 
+        <div class="tagline">
+            VISION • KNOWLEDGE • SERVICE
+        </div>
 
-        <p>
-          Our focus is on quality learning, discipline,
-          good values, confidence and the overall
-          development of every child.
-        </p>
+        <div class="hero-buttons">
 
+            <a class="btn btn-primary"
+               href="#admission">
+                Admission Enquiry
+            </a>
 
-        <p class="muted">
-          We aim to provide students with a safe,
-          supportive and encouraging environment
-          where they can learn and grow.
-        </p>
-
-
-        <div class="about-highlights">
-
-          <div>
-            <strong>Nursery – 8</strong>
-            <span>Classes</span>
-          </div>
-
-
-          <div>
-            <strong>Quality</strong>
-            <span>Education</span>
-          </div>
-
-
-          <div>
-            <strong>Safe</strong>
-            <span>Environment</span>
-          </div>
+            <a class="btn btn-outline"
+               href="tel:+918603116471">
+                📞 Call School
+            </a>
 
         </div>
 
-      </div>
+    </div>
 
+</section>
 
+<!-- ABOUT -->
+<section id="about">
 
-      <!-- SCHOOL LEADERSHIP -->
+    <div class="container">
 
-      <div class="profile-card">
+        <div class="section-title">
 
-        <h3>
-          School Leadership
-        </h3>
+            <span>About Us</span>
 
+            <h2>
+                Building a Better Future
+            </h2>
+
+            <p>
+                Education is not only about marks; it is about
+                developing confident, responsible and capable
+                human beings.
+            </p>
+
+        </div>
+
+        <div class="about-grid">
+
+            <div class="card">
+
+                <h2>
+                    Drishti Public School
+                </h2>
+
+                <p>
+                    Drishti Public School is committed to providing
+                    a positive and disciplined learning environment
+                    where students can discover their potential
+                    and grow with confidence.
+                </p>
+
+                <ul class="about-list">
+
+                    <li>
+                        ✓ Quality-focused education
+                    </li>
+
+                    <li>
+                        ✓ Discipline and good values
+                    </li>
+
+                    <li>
+                        ✓ Overall personality development
+                    </li>
+
+                    <li>
+                        ✓ Supportive learning environment
+                    </li>
+
+                    <li>
+                        ✓ Focus on knowledge and practical learning
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div class="about-image">
+
+                <img src="gate.jpg.jpg"
+                     alt="Drishti Public School Campus">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- SCHOOL LEADERSHIP -->
+<section class="leader-section"
+         id="leadership">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>
+                School Leadership
+            </span>
+
+            <h2>
+                Our Leadership
+            </h2>
+
+            <p>
+                Strong leadership and dedicated guidance for the
+                academic and overall development of our students.
+            </p>
+
+        </div>
 
         <div class="leader-grid">
 
+            <!-- PRINCIPAL LEFT -->
+            <div class="leader-card">
 
-          <!-- PRINCIPAL -->
+                <img src="principal.jpg"
+                     alt="Principal Dipsheela Kumari">
 
-          <div class="leader">
+                <span class="role">
+                    PRINCIPAL
+                </span>
 
-            <img src="principal.jpg"
-                 alt="Principal Dipsheela Kumari"
-                 loading="lazy">
+                <h3>
+                    Dipsheela Kumari
+                </h3>
 
+                <p>
+                    Dedicated to quality education, discipline
+                    and the all-round development of students.
+                </p>
 
-            <strong>
-              Principal
-            </strong>
+                <div class="phone">
 
+                    📞
+                    <a href="tel:+918603116471">
+                        8603116471
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- DIRECTOR RIGHT -->
+            <div class="leader-card">
+
+                <img src="director.jpg"
+                     alt="Director Dilip Kumar">
+
+                <span class="role">
+                    DIRECTOR
+                </span>
+
+                <h3>
+                    Dilip Kumar (B.Tech, P.G)
+                </h3>
+
+                <p>
+                    Committed to building a positive,
+                    disciplined and progressive learning
+                    environment.
+                </p>
+
+                <div class="phone">
+
+                    📞
+                    <a href="tel:+919709767598">
+                        9709767598
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- INSTITUTION FEATURES -->
+<section id="features">
+
+    <div class="container">
+
+        <div class="section-title">
 
             <span>
-              Dipsheela Kumari (B.A.)
+                हमारी संस्था की विशेषताएँ
             </span>
 
+            <h2>
+                Our Special Features
+            </h2>
 
             <p>
-              📞
-              <a href="tel:+918603116471">
-                8603116471
-              </a>
+                विद्यार्थी के ज्ञान, अनुशासन, व्यक्तित्व और भविष्य
+                के सर्वांगीण विकास पर हमारा विशेष ध्यान।
             </p>
 
+        </div>
 
-            <small>
-              Dedicated to quality education,
-              discipline and the all-round
-              development of students.
-            </small>
+        <div class="features">
 
-          </div>
+            <div class="feature">
 
+                <div class="feature-icon">
+                    📚
+                </div>
 
+                <h3>
+                    Quality Education
+                </h3>
 
-          <!-- DIRECTOR -->
+                <p>
+                    मजबूत शैक्षणिक आधार और सीखने के लिए
+                    सकारात्मक वातावरण।
+                </p>
 
-          <div class="leader">
+            </div>
 
-            <img src="director.jpg"
-                 alt="Director Dilip Kumar"
-                 loading="lazy">
+            <div class="feature">
 
+                <div class="feature-icon">
+                    🎯
+                </div>
 
-            <strong>
-              Director
-            </strong>
+                <h3>
+                    Student Development
+                </h3>
 
+                <p>
+                    विद्यार्थियों के ज्ञान, आत्मविश्वास और
+                    व्यक्तित्व विकास पर विशेष ध्यान।
+                </p>
+
+            </div>
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    🧠
+                </div>
+
+                <h3>
+                    Knowledge & Skills
+                </h3>
+
+                <p>
+                    केवल किताबों तक सीमित नहीं, बल्कि practical
+                    knowledge और useful skills पर जोर।
+                </p>
+
+            </div>
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    ⭐
+                </div>
+
+                <h3>
+                    Discipline & Values
+                </h3>
+
+                <p>
+                    अनुशासन, संस्कार, जिम्मेदारी और अच्छे
+                    व्यवहार को शिक्षा का महत्वपूर्ण हिस्सा।
+                </p>
+
+            </div>
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    🏫
+                </div>
+
+                <h3>
+                    Learning Environment
+                </h3>
+
+                <p>
+                    विद्यार्थियों के लिए सुरक्षित, सहयोगी और
+                    प्रेरणादायक learning environment।
+                </p>
+
+            </div>
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    🌱
+                </div>
+
+                <h3>
+                    Bright Future
+                </h3>
+
+                <p>
+                    विद्यार्थियों को आत्मनिर्भर और जिम्मेदार
+                    नागरिक बनाने की दिशा में निरंतर प्रयास।
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- GALLERY -->
+<section class="campus"
+         id="gallery">
+
+    <div class="container">
+
+        <div class="section-title">
 
             <span>
-              Dilip Kumar (B.Tech, PG)
+                Our Campus
             </span>
 
+            <h2>
+                School Gallery
+            </h2>
 
             <p>
-              📞
-              <a href="tel:+919709767598">
-                9709767598
-              </a>
+                हमारे विद्यालय के परिसर और learning environment
+                की झलक।
             </p>
 
+        </div>
 
-            <small>
-              Committed to building a positive,
-              disciplined and progressive
-              learning environment.
-            </small>
+        <div class="campus-grid">
 
-          </div>
+            <div class="campus-card">
+
+                <img src="gate.jpg.jpg"
+                     alt="School Gate">
+
+                <div>
+                    School Campus
+                </div>
+
+            </div>
+
+            <div class="campus-card">
+
+                <img src="playground.jpg.jpg"
+                     alt="School Playground">
+
+                <div>
+                    Playground
+                </div>
+
+            </div>
+
+            <div class="campus-card">
+
+                <img src="classroom.jpg.jpg"
+                     alt="School Classroom">
+
+                <div>
+                    Classroom
+                </div>
+
+            </div>
 
         </div>
 
-      </div>
-
     </div>
-
-  </div>
 
 </section>
 
+<!-- ADMISSION -->
+<section class="admission"
+         id="admission">
 
+    <div class="container">
 
-<!-- ================= FACILITIES ================= -->
+        <div class="admission-box">
 
-<section id="facilities"
-         class="section alt">
+            <h2>
+                Admission Enquiry
+            </h2>
 
-  <div class="container">
+            <p>
+                अपने बच्चे के उज्ज्वल भविष्य की शुरुआत
+                Drishti Public School से करें।
+            </p>
 
+            <a class="btn btn-primary"
+               href="https://wa.me/919709767598?text=Hello%20Drishti%20Public%20School,%20I%20want%20to%20know%20about%20admission."
+               target="_blank">
 
-    <div class="section-title">
+                💬 WhatsApp Admission Enquiry
 
-      <span>
-        OUR FACILITIES
-      </span>
+            </a>
 
-      <h2>
-        हमारी संस्था की विशेषताएँ
-      </h2>
-
-      <p>
-        विद्यार्थियों की गुणवत्तापूर्ण शिक्षा,
-        सुरक्षा और सर्वांगीण विकास के लिए
-        हमारी संस्था की प्रमुख सुविधाएँ।
-      </p>
+        </div>
 
     </div>
-
-
-
-    <div class="features-grid">
-
-
-      <article class="feature-card">
-
-        <div class="feature-icon">
-          ⚡
-        </div>
-
-        <div>
-
-          <h3>
-            24×7 बिजली की सुविधा
-          </h3>
-
-          <p>
-            विद्यालय में निरंतर विद्युत
-            आपूर्ति की बेहतर व्यवस्था।
-          </p>
-
-        </div>
-
-      </article>
-
-
-
-      <article class="feature-card">
-
-        <div class="feature-icon">
-          👨‍🏫
-        </div>
-
-        <div>
-
-          <h3>
-            विशेषज्ञ एवं अनुभवी शिक्षक
-          </h3>
-
-          <p>
-            विषय-विशेषज्ञ, प्रशिक्षित एवं अनुभवी
-            शिक्षकों द्वारा गुणवत्तापूर्ण पठन-पाठन।
-          </p>
-
-        </div>
-
-      </article>
-
-
-
-      <article class="feature-card">
-
-        <div class="feature-icon">
-          📝
-        </div>
-
-        <div>
-
-          <h3>
-            साप्ताहिक रचनात्मक आकलन
-          </h3>
-
-          <p>
-            प्रत्येक सप्ताह बच्चों की सीखने की
-            प्रगति का रचनात्मक आकलन।
-          </p>
-
-        </div>
-
-      </article>
-
-
-
-      <article class="feature-card">
-
-        <div class="feature-icon">
-          📚
-        </div>
-
-        <div>
-
-          <h3>
-            मासिक जाँच परीक्षा
-          </h3>
-
-          <p>
-            प्रत्येक महीने के अंत में विद्यार्थियों
-            की शैक्षणिक प्रगति की जाँच।
-          </p>
-
-        </div>
-
-      </article>
-
-
-
-      <article class="feature-card">
-
-        <div class="feature-icon">
-          🎯
-        </div>
-
-        <div>
-
-          <h3>
-            कमजोर विद्यार्थियों पर विशेष ध्यान
-          </h3>
-
-          <p>
-            कमजोर विद्यार्थियों को अतिरिक्त
-            मार्गदर्शन एवं आवश्यक सहयोग।
-          </p>
-
-        </div>
-
-      </article>
-
-
-
-      <article class="feature-card">
-
-        <div class="feature-icon">
-          🏫
-        </div>
-
-        <div>
-
-          <h3>
-            बेहतर छात्रावास सुविधा
-          </h3>
-
-          <p>
-            विद्यार्थियों के लिए सुरक्षित,
-            सुविधाजनक एवं व्यवस्थित छात्रावास।
-          </p>
-
-        </div>
-
-      </article>
-
-
-
-      <article class="feature-card">
-
-        <div class="feature-icon">
-          👦👧
-        </div>
-
-        <div>
-
-          <h3>
-            अलग-अलग छात्रावास
-          </h3>
-
-          <p>
-            लड़के एवं लड़कियों के लिए
-            अलग-अलग छात्रावास की व्यवस्था।
-          </p>
-
-        </div>
-
-      </article>
-
-
-
-      <article class="feature-card">
-
-        <div class="feature-icon">
-          🛡️
-        </div>
-
-        <div>
-
-          <h3>
-            सुरक्षित एवं स्वच्छ परिसर
-          </h3>
-
-          <p>
-            विद्यालय परिसर को सुरक्षित,
-            स्वच्छ एवं अनुशासित रखने पर विशेष जोर।
-          </p>
-
-        </div>
-
-      </article>
-
-
-
-      <article class="feature-card">
-
-        <div class="feature-icon">
-          📹
-        </div>
-
-        <div>
-
-          <h3>
-            CCTV एवं आवश्यक सुविधाएँ
-          </h3>
-
-          <p>
-            CCTV कैमरे, स्वच्छ पेयजल,
-            First Aid एवं साफ-सुथरे वॉशरूम की
-            उत्तम व्यवस्था।
-          </p>
-
-        </div>
-
-      </article>
-
-
-
-      <article class="feature-card">
-
-        <div class="feature-icon">
-          📈
-        </div>
-
-        <div>
-
-          <h3>
-            मासिक प्रगति समीक्षा
-          </h3>
-
-          <p>
-            प्रत्येक माह विद्यार्थियों की प्रगति
-            पर चर्चा एवं आवश्यक सुधार की योजना।
-          </p>
-
-        </div>
-
-      </article>
-
-
-
-      <article class="feature-card">
-
-        <div class="feature-icon">
-          🤝
-        </div>
-
-        <div>
-
-          <h3>
-            अभिभावक–विद्यालय संवाद
-          </h3>
-
-          <p>
-            माता-पिता और विद्यालय के बीच खुला,
-            पारदर्शी एवं निरंतर संवाद।
-          </p>
-
-        </div>
-
-      </article>
-
-
-
-      <!-- SMART & DIGITAL LEARNING -->
-
-      <article class="feature-card">
-
-        <div class="feature-icon">
-          💡
-        </div>
-
-        <div>
-
-          <h3>
-            स्मार्ट एवं डिजिटल शिक्षण
-          </h3>
-
-          <p>
-            आधुनिक एवं रोचक शिक्षण के लिए
-            डिजिटल साधनों और स्मार्ट लर्निंग
-            का उपयोग किया जाता है।
-          </p>
-
-        </div>
-
-      </article>
-
-
-    </div>
-
-  </div>
 
 </section>
 
-<!-- ================= OLD FACILITIES ================= -->
+<!-- CONTACT -->
+<section id="contact">
 
-<section class="section old-facilities">
+    <div class="container">
 
-  <div class="container">
+        <div class="section-title">
 
-    <div class="section-title">
+            <span>
+                Get In Touch
+            </span>
 
-      <span>MORE FACILITIES</span>
+            <h2>
+                Contact Us
+            </h2>
 
-      <h2>School Facilities</h2>
+        </div>
 
-      <p>
-        विद्यार्थियों के सीखने और सर्वांगीण विकास के लिए
-        विद्यालय की अन्य सुविधाएँ।
-      </p>
+        <div class="contact-grid">
+
+            <div class="contact-card">
+
+                <h3>
+                    School Address
+                </h3>
+
+                <div class="contact-item">
+
+                    📍 Ward 12, Raghunathpur,
+                    Bhargama, Araria,
+                    Bihar – 854334
+
+                </div>
+
+                <div class="contact-item">
+
+                    📞 Principal:
+                    <a href="tel:+918603116471">
+                        8603116471
+                    </a>
+
+                </div>
+
+                <div class="contact-item">
+
+                    📞 Director:
+                    <a href="tel:+919709767598">
+                        9709767598
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="contact-card">
+
+                <h3>
+                    School Leadership
+                </h3>
+
+                <div class="contact-item">
+
+                    <strong>
+                        Principal
+                    </strong>
+
+                    <br>
+
+                    Dipsheela Kumari
+
+                </div>
+
+                <div class="contact-item">
+
+                    <strong>
+                        Director
+                    </strong>
+
+                    <br>
+
+                    Dilip Kumar (B.Tech, P.G)
+
+                </div>
+
+                <p style="margin-top:15px;">
+
+                    <strong>
+                        Vision • Knowledge • Service
+                    </strong>
+
+                </p>
+
+            </div>
+
+        </div>
 
     </div>
-
-
-    <div class="cards">
-
-
-      <article class="card">
-
-        <div class="icon">📚</div>
-
-        <h3>Library</h3>
-
-        <p>
-          विद्यार्थियों के लिए पढ़ने और सीखने
-          की उपयोगी पुस्तकें एवं अध्ययन सामग्री।
-        </p>
-
-      </article>
-
-
-      <article class="card">
-
-        <div class="icon">💻</div>
-
-        <h3>Computer</h3>
-
-        <p>
-          विद्यार्थियों के लिए computer-based
-          learning और digital skills की सुविधा।
-        </p>
-
-      </article>
-
-
-      <article class="card">
-
-        <div class="icon">⚽</div>
-
-        <h3>Playground</h3>
-
-        <p>
-          खेल-कूद, sports और physical activities
-          के लिए playground की सुविधा।
-        </p>
-
-      </article>
-
-
-      <article class="card">
-
-        <div class="icon">🎓</div>
-
-        <h3>Nursery to 8th</h3>
-
-        <p>
-          Nursery से Class 8 तक विद्यार्थियों
-          के लिए शिक्षा की सुविधा।
-        </p>
-
-      </article>
-
-
-    </div>
-
-  </div>
 
 </section>
 
-
-<style>
-
-.old-facilities {
-  background: #ffffff;
-}
-
-.old-facilities .cards {
-  margin-top: 30px;
-}
-
-.old-facilities .card {
-  transition: transform 0.3s ease,
-              box-shadow 0.3s ease;
-}
-
-.old-facilities .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.10);
-}
-/* Mobile Menu */
-
-@media (max-width: 700px) {
-
-  .nav {
-    position: relative;
-  }
-
-  .menu {
-    display: block;
-    border: none;
-    background: transparent;
-    font-size: 30px;
-    cursor: pointer;
-    padding: 6px 10px;
-    color: #174f8c;
-    z-index: 1001;
-  }
-
-  .nav nav {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: #ffffff;
-    padding: 12px;
-    border-radius: 0 0 15px 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,.15);
-    z-index: 1000;
-  }
-
-  .nav nav.active {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .nav nav a {
-    display: block;
-    padding: 13px 16px;
-    text-decoration: none;
-  }
-
-}
-
-@media (min-width: 701px) {
-
-  .menu {
-    display: none;
-  }
-
-}
-</style>
-
-<!-- ================= ADMISSION ================= -->
-
-<section id="admission"
-         class="section">
-
-  <div class="container">
-
-
-    <div class="section-title">
-
-      <span>
-        ENQUIRY
-      </span>
-
-      <h2>
-        Admission Enquiry
-      </h2>
-
-      <p>
-        For admission information,
-        please fill in the details below.
-      </p>
-
-    </div>
-
-
-
-    <form class="admission-form"
-          onsubmit="sendEnquiry(event)">
-
-
-      <div class="form-grid">
-
-
-        <label>
-
-          Student Name
-
-          <input id="studentName"
-                 type="text"
-                 required
-                 placeholder="Enter student name">
-
-        </label>
-
-
-
-        <label>
-
-          Parent / Guardian Name
-
-          <input id="parentName"
-                 type="text"
-                 required
-                 placeholder="Enter parent name">
-
-        </label>
-
-
-
-        <label>
-
-          Mobile Number
-
-          <input id="mobile"
-                 type="tel"
-                 required
-                 placeholder="Enter mobile number">
-
-        </label>
-
-
-
-        <label>
-
-          Class
-
-          <select id="className"
-                  required>
-
-            <option value="">
-              Select class
-            </option>
-
-            <option>Nursery</option>
-            <option>LKG</option>
-            <option>UKG</option>
-            <option>Class 1</option>
-            <option>Class 2</option>
-            <option>Class 3</option>
-            <option>Class 4</option>
-            <option>Class 5</option>
-            <option>Class 6</option>
-            <option>Class 7</option>
-            <option>Class 8</option>
-
-          </select>
-
-        </label>
-
-      </div>
-
-
-
-      <label>
-
-        Message / Enquiry
-
-        <textarea id="message"
-                  rows="4"
-                  placeholder="Write your enquiry"></textarea>
-
-      </label>
-
-
-
-      <button class="btn primary"
-              type="submit">
-
-        📱 Send Enquiry on WhatsApp
-
-      </button>
-
-
-      <p class="form-note">
-        Your enquiry will open WhatsApp with
-        the school enquiry number.
-      </p>
-
-    </form>
-
-  </div>
-
-</section>
-
-
-
-<!-- ================= GALLERY ================= -->
-
-<section id="gallery"
-         class="section alt">
-
-  <div class="container">
-
-
-    <div class="section-title">
-
-      <span>
-        OUR GALLERY
-      </span>
-
-      <h2>
-        School Gallery
-      </h2>
-
-      <p>
-        Explore our school campus,
-        classrooms and activities.
-      </p>
-
-    </div>
-
-
-
-    <div class="professional-gallery">
-
-
-      <div class="gallery-card"
-           onclick="openGallery('gate.jpg.jpg','School Gate')">
-
-        <div class="gallery-image">
-
-          <img src="gate.jpg.jpg"
-               alt="School Gate"
-               loading="lazy">
-
-          <div class="gallery-overlay">
-            🔍
-            <strong>View Photo</strong>
-          </div>
-
-        </div>
-
-        <div class="gallery-caption">
-
-          <h3>
-            School Gate
-          </h3>
-
-          <p>
-            Drishti Public School Campus
-          </p>
-
-        </div>
-
-      </div>
-
-
-
-      <div class="gallery-card"
-           onclick="openGallery('playground.jpg.jpg','School Playground')">
-
-        <div class="gallery-image">
-
-          <img src="playground.jpg.jpg"
-               alt="School Playground"
-               loading="lazy">
-
-          <div class="gallery-overlay">
-            🔍
-            <strong>View Photo</strong>
-          </div>
-
-        </div>
-
-        <div class="gallery-caption">
-
-          <h3>
-            School Playground
-          </h3>
-
-          <p>
-            Sports and Physical Activities
-          </p>
-
-        </div>
-
-      </div>
-
-
-
-      <div class="gallery-card"
-           onclick="openGallery('classroom.jpg.jpg','Classroom')">
-
-        <div class="gallery-image">
-
-          <img src="classroom.jpg.jpg"
-               alt="Classroom"
-               loading="lazy">
-
-          <div class="gallery-overlay">
-            🔍
-            <strong>View Photo</strong>
-          </div>
-
-        </div>
-
-        <div class="gallery-caption">
-
-          <h3>
-            Classroom
-          </h3>
-
-          <p>
-            Learning and Education
-          </p>
-
-        </div>
-
-      </div>
-
-
-
-      <div class="gallery-card"
-           onclick="openGallery('activity.jpg.jpg','School Activity')">
-
-        <div class="gallery-image">
-
-          <img src="activity.jpg.jpg"
-               alt="School Activity"
-               loading="lazy">
-
-          <div class="gallery-overlay">
-            🔍
-            <strong>View Photo</strong>
-          </div>
-
-        </div>
-
-        <div class="gallery-caption">
-
-          <h3>
-            School Activity
-          </h3>
-
-          <p>
-            Student Activities
-          </p>
-
-        </div>
-
-      </div>
-
-
-
-      <div class="gallery-card"
-           onclick="openGallery('campus.jpg.jpg','School Campus')">
-
-        <div class="gallery-image">
-
-          <img src="campus.jpg.jpg"
-               alt="School Campus"
-               loading="lazy">
-
-          <div class="gallery-overlay">
-            🔍
-            <strong>View Photo</strong>
-          </div>
-
-        </div>
-
-        <div class="gallery-caption">
-
-          <h3>
-            School Campus
-          </h3>
-
-          <p>
-            Our School Environment
-          </p>
-
-        </div>
-
-      </div>
-
-
-
-      <div class="gallery-card"
-           onclick="openGallery('students.jpg.jpg','School Activities')">
-
-        <div class="gallery-image">
-
-          <img src="students.jpg.jpg"
-               alt="School Students"
-               loading="lazy">
-
-          <div class="gallery-overlay">
-            🔍
-            <strong>View Photo</strong>
-          </div>
-
-        </div>
-
-        <div class="gallery-caption">
-
-          <h3>
-            School Activities
-          </h3>
-
-          <p>
-            Students and Activities
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- ================= CONTACT ================= -->
-
-<section id="contact"
-         class="section contact">
-
-  <div class="container">
-
-
-    <div class="section-title">
-
-      <span>
-        CONTACT US
-      </span>
-
-      <h2>
-        Get in touch with the school
-      </h2>
-
-    </div>
-
-
-
-    <div class="contact-grid">
-
-
-      <div class="contact-card">
-
-        <h3>
-          Principal
-        </h3>
-
-        <p>
-          <strong>
-            Dipsheela Kumari (B.A.)
-          </strong>
-        </p>
-
-        <p>
-          📞
-          <a href="tel:+918603116471">
-            8603116471
-          </a>
-        </p>
-
-      </div>
-
-
-
-      <div class="contact-card">
-
-        <h3>
-          Director
-        </h3>
-
-        <p>
-          <strong>
-            Dilip Kumar (B.Tech, PG)
-          </strong>
-        </p>
-
-        <p>
-          📞
-          <a href="tel:+919709767598">
-            9709767598
-          </a>
-        </p>
-
-      </div>
-
-
-
-      <div class="contact-card">
-
-        <h3>
-          School Address
-        </h3>
-
-        <p>
-          Ward 12, Raghunathpur,<br>
-          Bhargama, Araria,<br>
-          Bihar – 854334
-        </p>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-</main>
-
-
-
-<!-- ================= FOOTER ================= -->
-
+<!-- FOOTER -->
 <footer>
 
-  <div class="container footer">
+    <div class="container">
 
-    <div>
+        <div class="footer-grid">
 
-      <strong>
-        Drishti Public School
-      </strong>
+            <div>
+
+                <h3>
+                    Drishti Public School
+                </h3>
+
+                <p>
+                    Vision • Knowledge • Service
+                </p>
+
+                <p>
+                    Committed to quality education,
+                    discipline and the all-round
+                    development of students.
+                </p>
+
+            </div>
+
+            <div>
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <p>
+                    <a href="#about">
+                        About
+                    </a>
+                </p>
+
+                <p>
+                    <a href="#leadership">
+                        Leadership
+                    </a>
+                </p>
+
+                <p>
+                    <a href="#features">
+                        Features
+                    </a>
+                </p>
+
+                <p>
+                    <a href="#gallery">
+                        Gallery
+                    </a>
+                </p>
+
+            </div>
+
+            <div>
+
+                <h3>
+                    Contact
+                </h3>
+
+                <p>
+                    📞 8603116471
+                </p>
+
+                <p>
+                    📞 9709767598
+                </p>
+
+                <p>
+                    📍 Raghunathpur, Araria, Bihar
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            © 2026 Drishti Public School.
+            All Rights Reserved.
+
+        </div>
 
     </div>
-
-
-    <div>
-
-      Nursery to Class 8 •
-      Raghunathpur, Araria, Bihar
-
-    </div>
-
-  </div>
-
-
-  <div class="copyright">
-
-    © 2026 Drishti Public School.
-    All Rights Reserved.
-
-  </div>
 
 </footer>
 
-
-
-<!-- ================= WHATSAPP ================= -->
-
+<!-- WHATSAPP -->
 <a class="whatsapp"
    href="https://wa.me/919709767598"
    target="_blank"
-   rel="noopener">
+   aria-label="WhatsApp">
 
-  WhatsApp
+    💬
 
 </a>
 
-
-
-<!-- ================= GALLERY POPUP ================= -->
-
-<div id="galleryModal"
-     class="gallery-modal"
-     onclick="closeGallery(event)">
-
-
-  <button class="gallery-close"
-          onclick="closeGallery()"
-          aria-label="Close">
-
-    ×
-
-  </button>
-
-
-  <img id="galleryModalImage"
-       src=""
-       alt="Gallery Preview">
-
-
-  <div id="galleryModalCaption"></div>
-
-</div>
-
-
-
-<!-- ================= EXTRA CSS ================= -->
-
-<style>
-
-/* About highlights */
-
-.about-highlights {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-  margin-top: 25px;
-}
-
-.about-highlights div {
-  background: #f4f8ff;
-  border-radius: 12px;
-  padding: 15px;
-  text-align: center;
-}
-
-.about-highlights strong {
-  display: block;
-  color: #174f8c;
-  font-size: 18px;
-}
-
-.about-highlights span {
-  color: #666;
-  font-size: 12px;
-}
-
-
-/* Leadership */
-
-.leader small {
-  display: block;
-  margin-top: 8px;
-  color: #777;
-  line-height: 1.5;
-}
-
-
-/* Facilities */
-
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-  margin-top: 30px;
-}
-
-.feature-card {
-  background: #fff;
-  border: 1px solid #e3eaf3;
-  border-radius: 18px;
-  padding: 22px;
-  display: flex;
-  align-items: flex-start;
-  gap: 16px;
-  box-shadow: 0 6px 20px rgba(0,0,0,.07);
-  transition: .3s ease;
-}
-
-.feature-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 28px rgba(0,0,0,.12);
-}
-
-.feature-icon {
-  min-width: 56px;
-  height: 56px;
-  border-radius: 15px;
-  background: #eef5ff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 27px;
-}
-
-.feature-card h3 {
-  margin: 2px 0 8px;
-  color: #174f8c;
-  font-size: 18px;
-}
-
-.feature-card p {
-  margin: 0;
-  color: #666;
-  font-size: 14px;
-  line-height: 1.6;
-}
-
-
-/* Gallery */
-
-.professional-gallery {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 24px;
-  margin-top: 30px;
-}
-
-.gallery-card {
-  background: #fff;
-  border-radius: 18px;
-  overflow: hidden;
-  border: 1px solid #e5eaf1;
-  box-shadow: 0 7px 22px rgba(0,0,0,.08);
-  cursor: pointer;
-  transition: .3s ease;
-}
-
-.gallery-card:hover {
-  transform: translateY(-7px);
-  box-shadow: 0 14px 30px rgba(0,0,0,.14);
-}
-
-.gallery-image {
-  position: relative;
-  height: 230px;
-  overflow: hidden;
-}
-
-.gallery-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: .4s ease;
-}
-
-.gallery-card:hover img {
-  transform: scale(1.06);
-}
-
-.gallery-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,.48);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  color: #fff;
-  opacity: 0;
-  transition: .3s ease;
-}
-
-.gallery-card:hover .gallery-overlay {
-  opacity: 1;
-}
-
-.gallery-overlay strong {
-  font-size: 14px;
-}
-
-.gallery-caption {
-  padding: 17px 18px;
-}
-
-.gallery-caption h3 {
-  margin: 0 0 6px;
-  color: #174f8c;
-  font-size: 18px;
-}
-
-.gallery-caption p {
-  margin: 0;
-  color: #666;
-  font-size: 13.5px;
-}
-
-
-/* Gallery popup */
-
-.gallery-modal {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,.88);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 25px;
-  z-index: 9999;
-}
-
-.gallery-modal.show {
-  display: flex;
-}
-
-.gallery-modal img {
-  max-width: 92%;
-  max-height: 78vh;
-  object-fit: contain;
-  border-radius: 10px;
-}
-
-#galleryModalCaption {
-  color: #fff;
-  font-size: 18px;
-  font-weight: bold;
-  margin-top: 14px;
-}
-
-.gallery-close {
-  position: absolute;
-  top: 18px;
-  right: 24px;
-  width: 45px;
-  height: 45px;
-  border: none;
-  border-radius: 50%;
-  background: #fff;
-  color: #222;
-  font-size: 32px;
-  cursor: pointer;
-}
-
-
-/* Responsive */
-
-@media (max-width: 900px) {
-
-  .features-grid {
-    grid-template-columns: repeat(2,1fr);
-  }
-
-  .professional-gallery {
-    grid-template-columns: repeat(2,1fr);
-  }
-
-}
-
-
-@media (max-width: 600px) {
-
-  .features-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .professional-gallery {
-    grid-template-columns: 1fr;
-  }
-
-  .about-highlights {
-    grid-template-columns: 1fr;
-  }
-
-  .feature-card {
-    padding: 18px;
-  }
-
-  .gallery-image {
-    height: 220px;
-  }
-
-}
-
-
-/* Copyright */
-
-.copyright {
-  text-align: center;
-  padding: 12px 15px;
-  font-size: 13px;
-  opacity: .8;
-}
-
-</style>
-
-
-
-<!-- ================= SCRIPTS ================= -->
-
 <script>
 
+function toggleMenu(){
 
-/* Admission WhatsApp */
-
-function sendEnquiry(event) {
-
-  event.preventDefault();
-
-
-  const student =
-    document.getElementById("studentName").value;
-
-
-  const parent =
-    document.getElementById("parentName").value;
-
-
-  const mobile =
-    document.getElementById("mobile").value;
-
-
-  const className =
-    document.getElementById("className").value;
-
-
-  const message =
-    document.getElementById("message").value;
-
-
-  const text =
-    "Admission Enquiry - Drishti Public School\n" +
-    "Student Name: " + student + "\n" +
-    "Parent/Guardian: " + parent + "\n" +
-    "Mobile: " + mobile + "\n" +
-    "Class: " + className + "\n" +
-    "Enquiry: " + message;
-
-
-  window.open(
-    "https://wa.me/919709767598?text=" +
-    encodeURIComponent(text),
-    "_blank"
-  );
+    document.getElementById("nav")
+    .classList.toggle("show");
 
 }
 
+document.querySelectorAll("#nav a")
+.forEach(function(link){
 
+    link.addEventListener("click",function(){
 
-/* Gallery popup */
-
-function openGallery(image,title) {
-
-  const modal =
-    document.getElementById("galleryModal");
-
-  const modalImage =
-    document.getElementById("galleryModalImage");
-
-  const caption =
-    document.getElementById("galleryModalCaption");
-
-
-  modalImage.src = image;
-
-  modalImage.alt = title;
-
-  caption.textContent = title;
-
-  modal.classList.add("show");
-
-  document.body.style.overflow = "hidden";
-
-}
-
-
-
-function closeGallery(event) {
-
-  if (
-    event &&
-    event.target &&
-    event.target.id !== "galleryModal" &&
-    !event.target.classList.contains("gallery-close")
-  ) {
-    return;
-  }
-
-
-  document
-    .getElementById("galleryModal")
-    .classList.remove("show");
-
-
-  document.body.style.overflow = "";
-
-}
-
-
-
-/* Escape key */
-
-document.addEventListener(
-  "keydown",
-  function(event) {
-
-    if (event.key === "Escape") {
-
-      document
-        .getElementById("galleryModal")
+        document.getElementById("nav")
         .classList.remove("show");
 
-      document.body.style.overflow = "";
-
-    }
-
-  }
-);
-/* Mobile Menu */
-
-const menuButton = document.getElementById("menuButton");
-const nav = document.querySelector(".nav nav");
-
-menuButton.addEventListener("click", function () {
-
-  nav.classList.toggle("active");
-
-  const isOpen = nav.classList.contains("active");
-
-  menuButton.setAttribute("aria-expanded", isOpen);
-
-  menuButton.setAttribute(
-    "aria-label",
-    isOpen ? "Close menu" : "Open menu"
-  );
-
-  menuButton.textContent = isOpen ? "✕" : "☰";
+    });
 
 });
 
-
-/* Close menu after clicking a link */
-
-document.querySelectorAll(".nav nav a").forEach(function(link) {
-
-  link.addEventListener("click", function() {
-
-    nav.classList.remove("active");
-
-    menuButton.setAttribute("aria-expanded", "false");
-
-    menuButton.setAttribute("aria-label", "Open menu");
-
-    menuButton.textContent = "☰";
-
-  });
-
-});
 </script>
 
-
 </body>
-
 </html>
