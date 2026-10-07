@@ -899,3 +899,542 @@ footer p {
     font-size: 13px;
   }
 }
+/* =========================================
+   ADMISSION / ENQUIRY
+========================================= */
+
+.admission-section {
+  padding: 75px 0;
+  background: #eef5fb;
+}
+
+.admission-box {
+  max-width: 1050px;
+  margin: auto;
+
+  background: linear-gradient(
+    135deg,
+    #062b57,
+    #0b4c87
+  );
+
+  border-radius: 24px;
+  padding: 45px;
+
+  display: flex;
+  align-items: center;
+  gap: 35px;
+
+  color: #fff;
+
+  box-shadow: 0 15px 40px rgba(6, 43, 87, 0.18);
+}
+
+.admission-icon {
+  width: 90px;
+  height: 90px;
+  flex-shrink: 0;
+
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  border-radius: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 42px;
+}
+
+.admission-content {
+  flex: 1;
+}
+
+.admission-label {
+  display: inline-block;
+
+  background: #e9a91b;
+  color: #fff;
+
+  padding: 5px 13px;
+  border-radius: 30px;
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+
+  margin-bottom: 10px;
+}
+
+.admission-content h2 {
+  font-size: 34px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.admission-content p {
+  color: #e3edf8;
+  max-width: 720px;
+  margin-bottom: 23px;
+  font-size: 15px;
+}
+
+.admission-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.admission-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 20px;
+  border-radius: 9px;
+
+  font-weight: 700;
+  font-size: 14px;
+
+  transition: 0.25s ease;
+}
+
+.admission-btn:hover {
+  transform: translateY(-3px);
+}
+
+.admission-btn.whatsapp {
+  background: #25d366;
+  color: #fff;
+}
+
+.admission-btn.call {
+  background: #fff;
+  color: #062b57;
+}
+
+
+/* =========================================
+   CONTACT SECTION
+========================================= */
+
+.contact-section {
+  padding: 80px 0;
+  background: #fff;
+}
+
+.contact-grid-new {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.contact-card-new {
+  background: #fff;
+
+  border: 1px solid #e2e9f1;
+  border-radius: 18px;
+
+  padding: 27px;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+
+  box-shadow: 0 8px 25px rgba(9, 43, 85, 0.07);
+
+  transition: 0.3s ease;
+}
+
+.contact-card-new:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 30px rgba(9, 43, 85, 0.12);
+}
+
+.contact-icon {
+  width: 50px;
+  height: 50px;
+
+  flex-shrink: 0;
+
+  border-radius: 13px;
+
+  background: #eaf5ff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 24px;
+}
+
+.contact-card-new h3 {
+  color: #062b57;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.contact-card-new p {
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+.contact-card-new a {
+  display: block;
+
+  color: #0b5ca8;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  margin-top: 6px;
+}
+
+.contact-card-new a:hover {
+  color: #e19b18;
+}
+
+.director-contact {
+  margin-top: 15px !important;
+}
+
+.contact-whatsapp {
+  display: inline-block !important;
+
+  margin-top: 12px !important;
+
+  background: #25d366;
+  color: #fff !important;
+
+  padding: 9px 14px;
+  border-radius: 7px;
+
+  font-size: 13px !important;
+}
+
+.contact-whatsapp:hover {
+  background: #1fb957;
+}
+
+
+/* =========================================
+   TAGLINE
+========================================= */
+
+.contact-tagline {
+  margin-top: 45px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 13px;
+
+  color: #062b57;
+
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.contact-tagline b {
+  color: #e9a91b;
+  font-size: 18px;
+}
+
+
+/* =========================================
+   NEW FOOTER
+========================================= */
+
+.new-footer {
+  background: #041d3b;
+  color: #cbd8e8;
+
+  padding: 55px 0 20px;
+}
+
+.footer-main {
+  display: grid;
+
+  grid-template-columns: 1.5fr 1fr 1.3fr;
+
+  gap: 50px;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  margin-bottom: 17px;
+}
+
+.footer-brand img {
+  width: 58px;
+  height: 58px;
+
+  object-fit: contain;
+
+  border-radius: 50%;
+
+  background: #fff;
+  padding: 3px;
+}
+
+.footer-brand h3 {
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 3px;
+}
+
+.footer-brand span {
+  color: #e9a91b;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.footer-school p {
+  color: #aebfd2;
+  font-size: 14px;
+  line-height: 1.7;
+
+  max-width: 420px;
+}
+
+.new-footer h4 {
+  color: #fff;
+
+  font-size: 17px;
+
+  margin-bottom: 18px;
+}
+
+.footer-links a {
+  display: block;
+
+  color: #b7c7d9;
+
+  font-size: 14px;
+
+  margin-bottom: 9px;
+
+  transition: 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #e9a91b;
+  padding-left: 4px;
+}
+
+.footer-contact p {
+  color: #b7c7d9;
+
+  font-size: 14px;
+
+  margin-bottom: 8px;
+}
+
+.footer-contact a {
+  display: block;
+
+  color: #b7c7d9;
+
+  font-size: 14px;
+
+  margin-bottom: 9px;
+}
+
+.footer-contact a:hover {
+  color: #e9a91b;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.12);
+
+  margin-top: 40px;
+  padding-top: 20px;
+
+  text-align: center;
+
+  color: #8fa4bb;
+
+  font-size: 12px;
+}
+
+.footer-bottom p {
+  margin-bottom: 4px;
+}
+
+
+/* =========================================
+   FLOATING WHATSAPP
+========================================= */
+
+.floating-whatsapp {
+  position: fixed;
+
+  right: 20px;
+  bottom: 20px;
+
+  width: 58px;
+  height: 58px;
+
+  border-radius: 50%;
+
+  background: #25d366;
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 27px;
+
+  box-shadow: 0 8px 25px rgba(0,0,0,0.22);
+
+  z-index: 9999;
+
+  transition: 0.25s ease;
+}
+
+.floating-whatsapp:hover {
+  transform: scale(1.1);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .contact-grid-new {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contact-card-new:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 720px) {
+
+  .admission-section {
+    padding: 55px 0;
+  }
+
+  .admission-box {
+    padding: 30px 22px;
+
+    flex-direction: column;
+
+    text-align: center;
+
+    gap: 20px;
+  }
+
+  .admission-icon {
+    width: 75px;
+    height: 75px;
+    font-size: 34px;
+  }
+
+  .admission-content h2 {
+    font-size: 28px;
+  }
+
+  .admission-content p {
+    font-size: 14px;
+  }
+
+  .admission-actions {
+    flex-direction: column;
+  }
+
+  .admission-btn {
+    width: 100%;
+  }
+
+
+  .contact-section {
+    padding: 60px 0;
+  }
+
+  .contact-grid-new {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-card-new:last-child {
+    grid-column: auto;
+  }
+
+
+  .footer-main {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+
+    text-align: center;
+  }
+
+  .footer-brand {
+    justify-content: center;
+  }
+
+  .footer-school p {
+    margin: auto;
+  }
+
+  .footer-contact a {
+    text-align: center;
+  }
+
+  .contact-tagline {
+    margin-top: 35px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 420px) {
+
+  .admission-box {
+    border-radius: 18px;
+    padding: 27px 17px;
+  }
+
+  .admission-content h2 {
+    font-size: 25px;
+  }
+
+  .contact-card-new {
+    padding: 22px 18px;
+  }
+
+  .floating-whatsapp {
+    width: 52px;
+    height: 52px;
+
+    right: 15px;
+    bottom: 15px;
+
+    font-size: 24px;
+  }
+
+}
