@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Drishti Public School | Raghunathpur, Araria</title>
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
 <meta name="description"
-content="Drishti Public School, Ward 12, Raghunathpur, Bhargama, Araria, Bihar. Vision • Knowledge • Service.">
+      content="Drishti Public School, Ward 12, Raghunathpur, Bhargama, Araria, Bihar">
+
+<title>Drishti Public School | Raghunathpur</title>
 
 <style>
+
+/* =========================
+   GLOBAL
+========================= */
+
 *{
     margin:0;
     padding:0;
@@ -19,12 +27,14 @@ content="Drishti Public School, Ward 12, Raghunathpur, Bhargama, Araria, Bihar. 
 
 :root{
     --primary:#123c69;
-    --secondary:#f4b942;
-    --dark:#102a43;
-    --light:#f7f9fc;
+    --primary2:#174f8c;
+    --gold:#f4b942;
+    --dark:#0d2942;
+    --text:#34495e;
+    --light:#f5f8fc;
     --white:#ffffff;
-    --text:#334e68;
-    --shadow:0 10px 30px rgba(16,42,67,.12);
+    --border:#e4ebf2;
+    --shadow:0 10px 30px rgba(13,41,66,.10);
     --radius:18px;
 }
 
@@ -35,51 +45,70 @@ body{
     line-height:1.7;
 }
 
-a{
-    text-decoration:none;
-    color:inherit;
-}
-
 img{
     max-width:100%;
     display:block;
 }
 
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
 .container{
-    width:min(1120px,92%);
+    width:min(1150px,92%);
     margin:auto;
 }
 
-/* TOP BAR */
-.topbar{
-    background:var(--dark);
-    color:#fff;
-    padding:8px 0;
-    font-size:14px;
+.section{
+    padding:75px 0;
 }
 
-.topbar .container{
+.section.alt{
+    background:#eef4f9;
+}
+
+.muted{
+    color:#718096;
+}
+
+/* =========================
+   TOP BAR
+========================= */
+
+.topbar-mini{
+    background:var(--dark);
+    color:white;
+    font-size:13px;
+    padding:7px 0;
+}
+
+.topbar-mini .container{
     display:flex;
     justify-content:space-between;
+    align-items:center;
     gap:15px;
     flex-wrap:wrap;
 }
 
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
+
 header{
-    background:#fff;
     position:sticky;
     top:0;
     z-index:1000;
-    box-shadow:0 3px 15px rgba(0,0,0,.08);
+    background:white;
+    box-shadow:0 3px 18px rgba(0,0,0,.08);
 }
 
-.navbar{
+.nav{
     min-height:78px;
     display:flex;
     align-items:center;
     justify-content:space-between;
-    gap:20px;
+    position:relative;
 }
 
 .brand{
@@ -89,104 +118,120 @@ header{
 }
 
 .brand img{
-    width:58px;
-    height:58px;
+    width:55px;
+    height:55px;
     object-fit:contain;
     border-radius:50%;
 }
 
-.brand-text h1{
+.brand-text strong{
+    display:block;
     color:var(--primary);
-    font-size:21px;
+    font-size:20px;
     line-height:1.2;
 }
 
-.brand-text span{
-    font-size:12px;
-    color:#687b8f;
+.brand-text small{
+    color:#718096;
+    font-size:11px;
 }
 
 nav{
     display:flex;
     align-items:center;
-    gap:22px;
+    gap:20px;
 }
 
 nav a{
-    font-weight:600;
-    font-size:14px;
     color:var(--dark);
+    font-size:14px;
+    font-weight:bold;
     transition:.25s;
 }
 
 nav a:hover{
-    color:var(--secondary);
+    color:var(--primary2);
 }
 
-.menu-btn{
+.menu{
     display:none;
-    border:0;
-    background:var(--primary);
-    color:#fff;
-    padding:9px 12px;
-    border-radius:8px;
-    font-size:20px;
+    border:none;
+    background:transparent;
+    color:var(--primary);
+    font-size:28px;
+    cursor:pointer;
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
+
 .hero{
     min-height:620px;
+    position:relative;
     display:flex;
     align-items:center;
     text-align:center;
-    color:#fff;
+    color:white;
+    overflow:hidden;
+}
+
+.hero-bg{
+    position:absolute;
+    inset:0;
     background:
-      linear-gradient(rgba(8,35,60,.82),rgba(8,35,60,.82)),
+      linear-gradient(
+        rgba(8,35,60,.80),
+        rgba(8,35,60,.88)
+      ),
       url("gate.jpg.jpg") center/cover no-repeat;
 }
 
 .hero-content{
+    position:relative;
+    z-index:2;
     width:min(850px,94%);
     margin:auto;
 }
 
 .hero-logo{
-    width:105px;
-    height:105px;
+    width:115px;
+    height:115px;
     object-fit:contain;
-    margin:0 auto 20px;
-    background:#fff;
+    background:white;
     padding:8px;
     border-radius:50%;
+    margin:0 auto 22px;
     box-shadow:0 10px 30px rgba(0,0,0,.25);
 }
 
-.hero .welcome{
-    color:var(--secondary);
-    font-weight:700;
-    letter-spacing:3px;
+.eyebrow{
+    color:#ffd66d;
+    font-weight:bold;
+    letter-spacing:4px;
     font-size:14px;
 }
 
-.hero h2{
-    font-size:clamp(34px,6vw,64px);
+.hero h1{
+    font-size:clamp(38px,6vw,68px);
     line-height:1.1;
-    margin:12px 0;
+    margin:10px 0 15px;
 }
 
-.hero p{
+.hero .lead{
+    max-width:750px;
+    margin:auto;
     font-size:17px;
-    max-width:700px;
-    margin:12px auto;
 }
 
 .tagline{
+    color:#ffd66d;
     font-weight:bold;
-    color:#ffd76b;
     letter-spacing:2px;
+    margin-top:10px;
 }
 
-.hero-buttons{
+.actions{
     display:flex;
     justify-content:center;
     gap:14px;
@@ -196,30 +241,29 @@ nav a:hover{
 
 .btn{
     display:inline-block;
-    padding:12px 22px;
+    padding:12px 23px;
     border-radius:30px;
     font-weight:bold;
     transition:.25s;
-}
-
-.btn-primary{
-    background:var(--secondary);
-    color:#172b4d;
-}
-
-.btn-outline{
-    border:2px solid #fff;
-    color:#fff;
 }
 
 .btn:hover{
     transform:translateY(-2px);
 }
 
-/* SECTIONS */
-section{
-    padding:75px 0;
+.btn.primary{
+    background:var(--gold);
+    color:#172b4d;
 }
+
+.btn.light{
+    border:2px solid white;
+    color:white;
+}
+
+/* =========================
+   SECTION TITLE
+========================= */
 
 .section-title{
     text-align:center;
@@ -227,194 +271,347 @@ section{
 }
 
 .section-title span{
-    color:#d79a13;
-    font-weight:bold;
-    text-transform:uppercase;
-    letter-spacing:2px;
+    color:#c48b12;
     font-size:13px;
+    font-weight:bold;
+    letter-spacing:2px;
 }
 
 .section-title h2{
     color:var(--primary);
-    font-size:34px;
-    margin-top:5px;
+    font-size:36px;
+    line-height:1.25;
+    margin-top:6px;
 }
 
 .section-title p{
-    max-width:680px;
-    margin:8px auto 0;
+    max-width:720px;
+    margin:9px auto 0;
 }
 
-/* ABOUT */
+/* =========================
+   ABOUT
+========================= */
+
 .about-grid{
     display:grid;
-    grid-template-columns:1.1fr .9fr;
-    gap:30px;
+    grid-template-columns:1.05fr .95fr;
+    gap:35px;
     align-items:center;
 }
 
-.card{
-    background:#fff;
-    border-radius:var(--radius);
-    padding:30px;
+.about-text p{
+    margin-bottom:15px;
+}
+
+.about-highlights{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+    margin-top:25px;
+}
+
+.about-highlights div{
+    background:white;
+    padding:16px 10px;
+    border-radius:14px;
+    text-align:center;
     box-shadow:var(--shadow);
 }
 
+.about-highlights strong{
+    display:block;
+    color:var(--primary);
+    font-size:18px;
+}
+
+.about-highlights span{
+    font-size:12px;
+    color:#718096;
+}
+
 .about-image{
-    border-radius:var(--radius);
     overflow:hidden;
+    border-radius:var(--radius);
     box-shadow:var(--shadow);
 }
 
 .about-image img{
     width:100%;
-    height:350px;
+    height:360px;
     object-fit:cover;
 }
 
-.about-list{
-    margin-top:20px;
-    list-style:none;
+/* =========================
+   LEADERSHIP
+========================= */
+
+.profile-card{
+    background:white;
+    padding:30px;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
 }
 
-.about-list li{
-    padding:8px 0;
-    border-bottom:1px solid #edf1f5;
-}
-
-/* LEADERSHIP */
-.leader-section{
-    background:#eef4f9;
+.profile-card > h3{
+    color:var(--primary);
+    text-align:center;
+    font-size:25px;
+    margin-bottom:25px;
 }
 
 .leader-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:30px;
+    gap:25px;
 }
 
-.leader-card{
-    background:#fff;
-    padding:30px;
-    border-radius:var(--radius);
-    box-shadow:var(--shadow);
+.leader{
     text-align:center;
-    border-top:5px solid var(--secondary);
+    padding:25px 18px;
+    background:#f8fbfe;
+    border-radius:16px;
+    border:1px solid var(--border);
+    border-top:4px solid var(--gold);
 }
 
-.leader-card img{
-    width:170px;
-    height:170px;
+.leader img{
+    width:175px;
+    height:175px;
+    display:block;
     object-fit:cover;
+    object-position:center;
     border-radius:50%;
     margin:0 auto 18px;
-    border:6px solid #edf4fa;
+    border:6px solid white;
+    box-shadow:0 7px 20px rgba(0,0,0,.13);
 }
 
-.leader-card .role{
-    display:inline-block;
-    color:#fff;
-    background:var(--primary);
-    padding:5px 15px;
-    border-radius:20px;
-    font-size:13px;
-    font-weight:bold;
+.leader strong{
+    display:block;
+    color:var(--primary2);
+    font-size:14px;
+    text-transform:uppercase;
+    letter-spacing:1px;
 }
 
-.leader-card h3{
+.leader span{
+    display:block;
     color:var(--dark);
-    font-size:23px;
-    margin:10px 0 3px;
-}
-
-.phone{
-    color:var(--primary);
+    font-size:20px;
     font-weight:bold;
-    margin-top:10px;
+    margin-top:4px;
 }
 
-/* FEATURES */
-.features{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:22px;
+.leader p{
+    margin:8px 0;
+    color:var(--primary2);
+    font-weight:bold;
 }
 
-.feature{
-    background:#fff;
-    padding:27px;
-    border-radius:var(--radius);
-    box-shadow:var(--shadow);
-    transition:.25s;
+.leader p a{
+    color:var(--primary2);
 }
 
-.feature:hover{
-    transform:translateY(-5px);
+.leader small{
+    display:block;
+    color:#66788a;
+    font-size:13px;
+    line-height:1.6;
 }
 
-.feature-icon{
-    font-size:32px;
-    margin-bottom:10px;
-}
+/* =========================
+   FEATURES
+========================= */
 
-.feature h3{
-    color:var(--primary);
-    margin-bottom:7px;
-}
-
-/* CAMPUS */
-.campus{
-    background:#fff;
-}
-
-.campus-grid{
+.features-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:20px;
 }
 
-.campus-card{
+.feature-card{
+    display:flex;
+    gap:16px;
+    background:white;
+    padding:24px;
+    border-radius:16px;
+    border:1px solid var(--border);
+    box-shadow:var(--shadow);
+    transition:.25s;
+}
+
+.feature-card:hover{
+    transform:translateY(-5px);
+}
+
+.feature-icon{
+    min-width:52px;
+    height:52px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#edf5fc;
+    border-radius:14px;
+    font-size:25px;
+}
+
+.feature-card h3{
+    color:var(--primary);
+    font-size:17px;
+    margin-bottom:5px;
+}
+
+.feature-card p{
+    font-size:13px;
+    color:#607387;
+}
+
+/* =========================
+   MORE FACILITIES
+========================= */
+
+.old-facilities{
+    background:white;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.cards .card{
+    background:#f8fbfe;
+    padding:26px 20px;
+    text-align:center;
+    border-radius:16px;
+    border:1px solid var(--border);
+    transition:.25s;
+}
+
+.cards .card:hover{
+    transform:translateY(-6px);
+    box-shadow:var(--shadow);
+}
+
+.cards .icon{
+    font-size:35px;
+    margin-bottom:10px;
+}
+
+.cards .card h3{
+    color:var(--primary);
+    margin-bottom:7px;
+}
+
+.cards .card p{
+    font-size:13px;
+    color:#65788b;
+}
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.gallery-card{
+    background:white;
     overflow:hidden;
     border-radius:16px;
     box-shadow:var(--shadow);
 }
 
-.campus-card img{
+.gallery-card img{
     width:100%;
-    height:220px;
+    height:230px;
     object-fit:cover;
 }
 
-.campus-card div{
-    padding:15px;
-    font-weight:bold;
+.gallery-card div{
+    padding:14px;
     color:var(--primary);
+    font-weight:bold;
 }
 
-/* ADMISSION */
+/* =========================
+   ADMISSION
+========================= */
+
 .admission{
     background:
-      linear-gradient(rgba(18,60,105,.94),rgba(18,60,105,.94)),
+      linear-gradient(
+        rgba(18,60,105,.95),
+        rgba(18,60,105,.95)
+      ),
       url("classroom.jpg.jpg") center/cover;
-    color:#fff;
+    color:white;
 }
 
-.admission-box{
-    max-width:800px;
+.admission .section-title h2{
+    color:white;
+}
+
+.admission .section-title p{
+    color:#dce8f2;
+}
+
+.admission-form{
+    max-width:850px;
     margin:auto;
-    text-align:center;
+    background:white;
+    color:var(--text);
+    padding:30px;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
 }
 
-.admission h2{
-    font-size:38px;
-    margin-bottom:12px;
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
 }
 
-.admission p{
-    margin-bottom:22px;
+.admission-form label{
+    display:block;
+    font-weight:bold;
+    font-size:14px;
+    margin-bottom:18px;
 }
 
-/* CONTACT */
+.admission-form input,
+.admission-form select,
+.admission-form textarea{
+    width:100%;
+    margin-top:7px;
+    padding:12px 13px;
+    border:1px solid #d8e2eb;
+    border-radius:9px;
+    outline:none;
+    font:inherit;
+}
+
+.admission-form input:focus,
+.admission-form select:focus,
+.admission-form textarea:focus{
+    border-color:var(--primary2);
+}
+
+.form-note{
+    font-size:12px;
+    color:#718096;
+    margin-top:12px;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
 .contact-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
@@ -422,38 +619,51 @@ section{
 }
 
 .contact-card{
-    background:#fff;
-    padding:28px;
+    background:white;
+    padding:30px;
     border-radius:var(--radius);
     box-shadow:var(--shadow);
 }
 
 .contact-card h3{
     color:var(--primary);
-    margin-bottom:12px;
+    margin-bottom:15px;
 }
 
 .contact-item{
-    padding:9px 0;
-    border-bottom:1px solid #edf1f5;
+    padding:11px 0;
+    border-bottom:1px solid var(--border);
 }
 
-/* FOOTER */
+.contact-item a{
+    color:var(--primary2);
+    font-weight:bold;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
 footer{
     background:#0b2239;
-    color:#dce6ef;
-    padding:40px 0 20px;
+    color:#d8e3ed;
+    padding:45px 0 20px;
 }
 
 .footer-grid{
     display:grid;
-    grid-template-columns:1.4fr 1fr 1fr;
+    grid-template-columns:1.5fr 1fr 1fr;
     gap:30px;
 }
 
 footer h3{
-    color:#fff;
+    color:white;
     margin-bottom:12px;
+}
+
+footer p{
+    margin-bottom:6px;
+    font-size:14px;
 }
 
 .footer-bottom{
@@ -464,45 +674,87 @@ footer h3{
     font-size:13px;
 }
 
-/* WHATSAPP */
+/* =========================
+   WHATSAPP
+========================= */
+
 .whatsapp{
     position:fixed;
     right:18px;
     bottom:18px;
-    width:55px;
-    height:55px;
+    width:57px;
+    height:57px;
     border-radius:50%;
     display:flex;
     align-items:center;
     justify-content:center;
     background:#25d366;
-    color:#fff;
-    font-size:27px;
-    box-shadow:0 8px 20px rgba(0,0,0,.25);
+    color:white;
+    font-size:28px;
+    box-shadow:0 8px 22px rgba(0,0,0,.25);
     z-index:2000;
 }
 
-/* MOBILE */
-@media(max-width:850px){
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:950px){
+
+    nav{
+        gap:13px;
+    }
+
+    .features-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .cards{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:700px){
+
+    .topbar-mini .container{
+        justify-content:center;
+        text-align:center;
+    }
+
+    .menu{
+        display:block;
+    }
 
     nav{
         display:none;
         position:absolute;
+        top:78px;
         left:0;
         right:0;
-        top:78px;
-        background:#fff;
+        background:white;
+        padding:12px;
         flex-direction:column;
-        padding:20px;
-        box-shadow:0 10px 20px rgba(0,0,0,.1);
+        align-items:stretch;
+        gap:0;
+        box-shadow:0 10px 25px rgba(0,0,0,.14);
+        border-radius:0 0 15px 15px;
     }
 
-    nav.show{
+    nav.active{
         display:flex;
     }
 
-    .menu-btn{
-        display:block;
+    nav a{
+        padding:12px 15px;
+        border-bottom:1px solid #edf1f5;
+    }
+
+    .hero{
+        min-height:570px;
     }
 
     .about-grid,
@@ -510,11 +762,19 @@ footer h3{
         grid-template-columns:1fr;
     }
 
-    .features{
+    .leader-grid{
+        grid-template-columns:1fr;
+    }
+
+    .features-grid{
+        grid-template-columns:1fr;
+    }
+
+    .cards{
         grid-template-columns:1fr 1fr;
     }
 
-    .campus-grid{
+    .gallery-grid{
         grid-template-columns:1fr 1fr;
     }
 
@@ -523,31 +783,35 @@ footer h3{
     }
 }
 
-@media(max-width:600px){
-
-    .topbar .container{
-        justify-content:center;
-        text-align:center;
-    }
-
-    .brand-text h1{
-        font-size:17px;
-    }
+@media(max-width:520px){
 
     .brand img{
         width:48px;
         height:48px;
     }
 
-    .hero{
-        min-height:570px;
+    .brand-text strong{
+        font-size:17px;
     }
 
-    .hero h2{
-        font-size:36px;
+    .brand-text small{
+        font-size:9px;
     }
 
-    section{
+    .hero-logo{
+        width:95px;
+        height:95px;
+    }
+
+    .hero h1{
+        font-size:37px;
+    }
+
+    .hero .lead{
+        font-size:14px;
+    }
+
+    .section{
         padding:55px 0;
     }
 
@@ -555,29 +819,56 @@ footer h3{
         font-size:29px;
     }
 
-    .leader-grid,
-    .features,
-    .campus-grid,
-    .footer-grid{
+    .about-highlights{
         grid-template-columns:1fr;
     }
 
-    .leader-card{
-        padding:24px 18px;
+    .cards{
+        grid-template-columns:1fr;
     }
 
-    .about-image img{
-        height:260px;
+    .gallery-grid{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-card img{
+        height:240px;
+    }
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+    .admission-form{
+        padding:20px;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .leader img{
+        width:165px;
+        height:165px;
     }
 }
+
 </style>
+
 </head>
 
 <body>
 
-<!-- TOP BAR -->
-<div class="topbar">
+
+<!-- =========================
+     TOP INFORMATION BAR
+========================= -->
+
+<div class="topbar-mini">
+
     <div class="container">
+
         <span>
             📍 Ward 12, Raghunathpur, Bhargama, Araria, Bihar – 854334
         </span>
@@ -585,79 +876,123 @@ footer h3{
         <span>
             📞 8603116471 &nbsp; | &nbsp; 9709767598
         </span>
+
     </div>
+
 </div>
 
-<!-- HEADER -->
-<header>
-    <div class="container navbar">
 
-        <a href="#" class="brand">
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+    <div class="container nav">
+
+        <a class="brand" href="#home">
 
             <img src="school-logo.jpg.jpg"
                  alt="Drishti Public School Logo">
 
             <div class="brand-text">
-                <h1>Drishti Public School</h1>
-                <span>Vision • Knowledge • Service</span>
+
+                <strong>
+                    Drishti Public School
+                </strong>
+
+                <small>
+                    Vision • Knowledge • Service
+                </small>
+
             </div>
 
         </a>
 
-        <button class="menu-btn"
-                onclick="toggleMenu()">
+
+        <button class="menu"
+                id="menuButton"
+                aria-label="Open menu"
+                aria-expanded="false">
+
             ☰
+
         </button>
 
-        <nav id="nav">
+
+        <nav id="mainNav">
+
             <a href="#home">Home</a>
+
             <a href="#about">About</a>
+
             <a href="#leadership">Leadership</a>
-            <a href="#features">Features</a>
+
+            <a href="#facilities">Facilities</a>
+
+            <a href="#more-facilities">More Facilities</a>
+
+            <a href="#admission">Enquiry</a>
+
             <a href="#gallery">Gallery</a>
-            <a href="#admission">Admission</a>
+
             <a href="#contact">Contact</a>
+
         </nav>
 
     </div>
+
 </header>
 
-<!-- HERO -->
-<section class="hero" id="home">
 
-    <div class="hero-content">
+<main>
+
+
+<!-- =========================
+     HOME
+========================= -->
+
+<section id="home" class="hero">
+
+    <div class="hero-bg"></div>
+
+    <div class="container hero-content">
 
         <img class="hero-logo"
              src="school-logo.jpg.jpg"
-             alt="Drishti Public School">
+             alt="Drishti Public School Logo">
 
-        <div class="welcome">
+        <p class="eyebrow">
             WELCOME TO
-        </div>
-
-        <h2>
-            Drishti Public School
-        </h2>
-
-        <p>
-            Empowering young minds with quality education,
-            discipline, knowledge and values for a brighter future.
         </p>
 
-        <div class="tagline">
-            VISION • KNOWLEDGE • SERVICE
-        </div>
+        <h1>
+            Drishti Public School
+        </h1>
 
-        <div class="hero-buttons">
+        <p class="lead">
+            Ward 12, Raghunathpur, Bhargama,
+            Araria, Bihar – 854334
+        </p>
 
-            <a class="btn btn-primary"
+        <p class="tagline">
+            Vision • Knowledge • Service
+        </p>
+
+        <div class="actions">
+
+            <a class="btn primary"
                href="#admission">
-                Admission Enquiry
+
+                🎓 Admission Enquiry
+
             </a>
 
-            <a class="btn btn-outline"
+            <a class="btn light"
                href="tel:+918603116471">
+
                 📞 Call School
+
             </a>
 
         </div>
@@ -666,67 +1001,118 @@ footer h3{
 
 </section>
 
-<!-- ABOUT -->
-<section id="about">
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section id="about"
+         class="section">
 
     <div class="container">
 
         <div class="section-title">
 
-            <span>About Us</span>
+            <span>
+                ABOUT US
+            </span>
 
             <h2>
-                Building a Better Future
+                Learning with values and vision
             </h2>
 
             <p>
-                Education is not only about marks; it is about
-                developing confident, responsible and capable
-                human beings.
+                A caring environment for quality education,
+                discipline and overall development.
             </p>
 
         </div>
 
+
         <div class="about-grid">
 
-            <div class="card">
 
-                <h2>
-                    Drishti Public School
-                </h2>
+            <div class="about-text">
 
                 <p>
-                    Drishti Public School is committed to providing
-                    a positive and disciplined learning environment
-                    where students can discover their potential
-                    and grow with confidence.
+
+                    <strong>
+                        Drishti Public School
+                    </strong>
+
+                    is located at Raghunathpur,
+                    Bhargama, Araria, Bihar.
+
+                    The school provides education
+                    from <strong>Nursery to Class 8</strong>.
+
                 </p>
 
-                <ul class="about-list">
 
-                    <li>
-                        ✓ Quality-focused education
-                    </li>
+                <p>
 
-                    <li>
-                        ✓ Discipline and good values
-                    </li>
+                    Our focus is on quality learning,
+                    discipline, good values, confidence
+                    and the overall development of
+                    every child.
 
-                    <li>
-                        ✓ Overall personality development
-                    </li>
+                </p>
 
-                    <li>
-                        ✓ Supportive learning environment
-                    </li>
 
-                    <li>
-                        ✓ Focus on knowledge and practical learning
-                    </li>
+                <p class="muted">
 
-                </ul>
+                    We aim to provide students with
+                    a safe, supportive and encouraging
+                    environment where they can learn
+                    and grow.
+
+                </p>
+
+
+                <div class="about-highlights">
+
+                    <div>
+
+                        <strong>
+                            Nursery – 8
+                        </strong>
+
+                        <span>
+                            Classes
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            Quality
+                        </strong>
+
+                        <span>
+                            Education
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            Safe
+                        </strong>
+
+                        <span>
+                            Environment
+                        </span>
+
+                    </div>
+
+                </div>
 
             </div>
+
 
             <div class="about-image">
 
@@ -735,22 +1121,28 @@ footer h3{
 
             </div>
 
+
         </div>
 
     </div>
 
 </section>
 
-<!-- SCHOOL LEADERSHIP -->
-<section class="leader-section"
-         id="leadership">
+
+<!-- =========================
+     SCHOOL LEADERSHIP
+========================= -->
+
+<section id="leadership"
+         class="section alt">
 
     <div class="container">
+
 
         <div class="section-title">
 
             <span>
-                School Leadership
+                SCHOOL LEADERSHIP
             </span>
 
             <h2>
@@ -758,72 +1150,101 @@ footer h3{
             </h2>
 
             <p>
-                Strong leadership and dedicated guidance for the
-                academic and overall development of our students.
+                Strong leadership and dedicated guidance
+                for the academic and overall development
+                of our students.
             </p>
 
         </div>
 
-        <div class="leader-grid">
 
-            <!-- PRINCIPAL LEFT -->
-            <div class="leader-card">
+        <div class="profile-card">
 
-                <img src="principal.jpg"
-                     alt="Principal Dipsheela Kumari">
+            <h3>
+                School Leadership
+            </h3>
 
-                <span class="role">
-                    PRINCIPAL
-                </span>
 
-                <h3>
-                    Dipsheela Kumari
-                </h3>
+            <div class="leader-grid">
 
-                <p>
-                    Dedicated to quality education, discipline
-                    and the all-round development of students.
-                </p>
 
-                <div class="phone">
+                <!-- PRINCIPAL LEFT -->
 
-                    📞
-                    <a href="tel:+918603116471">
-                        8603116471
-                    </a>
+                <div class="leader">
+
+                    <img src="./principal.jpg"
+                         alt="Principal Dipsheela Kumari"
+                         loading="eager">
+
+                    <strong>
+                        Principal
+                    </strong>
+
+                    <span>
+                        Dipsheela Kumari
+                    </span>
+
+                    <p>
+
+                        📞
+
+                        <a href="tel:+918603116471">
+
+                            8603116471
+
+                        </a>
+
+                    </p>
+
+                    <small>
+
+                        Dedicated to quality education,
+                        discipline and the all-round
+                        development of students.
+
+                    </small>
+
+                </div>
+
+
+                <!-- DIRECTOR RIGHT -->
+
+                <div class="leader">
+
+                    <img src="./director.jpg"
+                         alt="Director Dilip Kumar"
+                         loading="eager">
+
+                    <strong>
+                        Director
+                    </strong>
+
+                    <span>
+                        Dilip Kumar (B.Tech, P.G)
+                    </span>
+
+                    <p>
+
+                        📞
+
+                        <a href="tel:+919709767598">
+
+                            9709767598
+
+                        </a>
+
+                    </p>
+
+                    <small>
+
+                        Committed to building a positive,
+                        disciplined and progressive
+                        learning environment.
+
+                    </small>
 
                 </div>
 
-            </div>
-
-            <!-- DIRECTOR RIGHT -->
-            <div class="leader-card">
-
-                <img src="director.jpg"
-                     alt="Director Dilip Kumar">
-
-                <span class="role">
-                    DIRECTOR
-                </span>
-
-                <h3>
-                    Dilip Kumar (B.Tech, P.G)
-                </h3>
-
-                <p>
-                    Committed to building a positive,
-                    disciplined and progressive learning
-                    environment.
-                </p>
-
-                <div class="phone">
-
-                    📞
-                    <a href="tel:+919709767598">
-                        9709767598
-                    </a>
-
-                </div>
 
             </div>
 
@@ -833,131 +1254,310 @@ footer h3{
 
 </section>
 
-<!-- INSTITUTION FEATURES -->
-<section id="features">
+
+<!-- =========================
+     INSTITUTION FEATURES
+========================= -->
+
+<section id="facilities"
+         class="section">
 
     <div class="container">
+
 
         <div class="section-title">
 
             <span>
-                हमारी संस्था की विशेषताएँ
+                OUR FACILITIES
             </span>
 
             <h2>
-                Our Special Features
+                हमारी संस्था की विशेषताएँ
             </h2>
 
             <p>
-                विद्यार्थी के ज्ञान, अनुशासन, व्यक्तित्व और भविष्य
-                के सर्वांगीण विकास पर हमारा विशेष ध्यान।
+
+                विद्यार्थियों की गुणवत्तापूर्ण शिक्षा,
+                सुरक्षा और सर्वांगीण विकास के लिए
+                हमारी संस्था की प्रमुख सुविधाएँ।
+
             </p>
 
         </div>
 
-        <div class="features">
 
-            <div class="feature">
+        <div class="features-grid">
+
+
+            <article class="feature-card">
+
+                <div class="feature-icon">
+                    ⚡
+                </div>
+
+                <div>
+
+                    <h3>
+                        24×7 बिजली की सुविधा
+                    </h3>
+
+                    <p>
+                        विद्यालय में निरंतर विद्युत
+                        आपूर्ति की बेहतर व्यवस्था।
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="feature-card">
+
+                <div class="feature-icon">
+                    👨‍🏫
+                </div>
+
+                <div>
+
+                    <h3>
+                        विशेषज्ञ एवं अनुभवी शिक्षक
+                    </h3>
+
+                    <p>
+                        विषय-विशेषज्ञ, प्रशिक्षित एवं
+                        अनुभवी शिक्षकों द्वारा
+                        गुणवत्तापूर्ण पठन-पाठन।
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="feature-card">
+
+                <div class="feature-icon">
+                    📝
+                </div>
+
+                <div>
+
+                    <h3>
+                        साप्ताहिक रचनात्मक आकलन
+                    </h3>
+
+                    <p>
+                        प्रत्येक सप्ताह बच्चों की
+                        सीखने की प्रगति का
+                        रचनात्मक आकलन।
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="feature-card">
 
                 <div class="feature-icon">
                     📚
                 </div>
 
-                <h3>
-                    Quality Education
-                </h3>
+                <div>
 
-                <p>
-                    मजबूत शैक्षणिक आधार और सीखने के लिए
-                    सकारात्मक वातावरण।
-                </p>
+                    <h3>
+                        मासिक जाँच परीक्षा
+                    </h3>
 
-            </div>
+                    <p>
+                        प्रत्येक महीने विद्यार्थियों
+                        की शैक्षणिक प्रगति की जाँच।
+                    </p>
 
-            <div class="feature">
+                </div>
+
+            </article>
+
+
+            <article class="feature-card">
 
                 <div class="feature-icon">
                     🎯
                 </div>
 
-                <h3>
-                    Student Development
-                </h3>
+                <div>
 
-                <p>
-                    विद्यार्थियों के ज्ञान, आत्मविश्वास और
-                    व्यक्तित्व विकास पर विशेष ध्यान।
-                </p>
+                    <h3>
+                        कमजोर विद्यार्थियों पर विशेष ध्यान
+                    </h3>
 
-            </div>
+                    <p>
+                        कमजोर विद्यार्थियों को अतिरिक्त
+                        मार्गदर्शन एवं आवश्यक सहयोग।
+                    </p>
 
-            <div class="feature">
-
-                <div class="feature-icon">
-                    🧠
                 </div>
 
-                <h3>
-                    Knowledge & Skills
-                </h3>
+            </article>
 
-                <p>
-                    केवल किताबों तक सीमित नहीं, बल्कि practical
-                    knowledge और useful skills पर जोर।
-                </p>
 
-            </div>
-
-            <div class="feature">
-
-                <div class="feature-icon">
-                    ⭐
-                </div>
-
-                <h3>
-                    Discipline & Values
-                </h3>
-
-                <p>
-                    अनुशासन, संस्कार, जिम्मेदारी और अच्छे
-                    व्यवहार को शिक्षा का महत्वपूर्ण हिस्सा।
-                </p>
-
-            </div>
-
-            <div class="feature">
+            <article class="feature-card">
 
                 <div class="feature-icon">
                     🏫
                 </div>
 
-                <h3>
-                    Learning Environment
-                </h3>
+                <div>
 
-                <p>
-                    विद्यार्थियों के लिए सुरक्षित, सहयोगी और
-                    प्रेरणादायक learning environment।
-                </p>
+                    <h3>
+                        बेहतर छात्रावास सुविधा
+                    </h3>
 
-            </div>
+                    <p>
+                        विद्यार्थियों के लिए सुरक्षित,
+                        सुविधाजनक एवं व्यवस्थित छात्रावास।
+                    </p>
 
-            <div class="feature">
-
-                <div class="feature-icon">
-                    🌱
                 </div>
 
-                <h3>
-                    Bright Future
-                </h3>
+            </article>
 
-                <p>
-                    विद्यार्थियों को आत्मनिर्भर और जिम्मेदार
-                    नागरिक बनाने की दिशा में निरंतर प्रयास।
-                </p>
 
-            </div>
+            <article class="feature-card">
+
+                <div class="feature-icon">
+                    👦👧
+                </div>
+
+                <div>
+
+                    <h3>
+                        अलग-अलग छात्रावास
+                    </h3>
+
+                    <p>
+                        लड़के एवं लड़कियों के लिए
+                        अलग-अलग छात्रावास की व्यवस्था।
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="feature-card">
+
+                <div class="feature-icon">
+                    🛡️
+                </div>
+
+                <div>
+
+                    <h3>
+                        सुरक्षित एवं स्वच्छ परिसर
+                    </h3>
+
+                    <p>
+                        विद्यालय परिसर को सुरक्षित,
+                        स्वच्छ एवं अनुशासित रखने पर
+                        विशेष जोर।
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="feature-card">
+
+                <div class="feature-icon">
+                    📹
+                </div>
+
+                <div>
+
+                    <h3>
+                        CCTV एवं आवश्यक सुविधाएँ
+                    </h3>
+
+                    <p>
+                        CCTV कैमरे, स्वच्छ पेयजल,
+                        First Aid एवं साफ-सुथरे
+                        वॉशरूम की उत्तम व्यवस्था।
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="feature-card">
+
+                <div class="feature-icon">
+                    📈
+                </div>
+
+                <div>
+
+                    <h3>
+                        मासिक प्रगति समीक्षा
+                    </h3>
+
+                    <p>
+                        प्रत्येक माह विद्यार्थियों की
+                        प्रगति पर चर्चा एवं आवश्यक
+                        सुधार की योजना।
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="feature-card">
+
+                <div class="feature-icon">
+                    🤝
+                </div>
+
+                <div>
+
+                    <h3>
+                        अभिभावक–विद्यालय संवाद
+                    </h3>
+
+                    <p>
+                        माता-पिता और विद्यालय के बीच
+                        खुला, पारदर्शी एवं निरंतर संवाद।
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="feature-card">
+
+                <div class="feature-icon">
+                    💡
+                </div>
+
+                <div>
+
+                    <h3>
+                        स्मार्ट एवं डिजिटल शिक्षण
+                    </h3>
+
+                    <p>
+                        आधुनिक एवं रोचक शिक्षण के लिए
+                        डिजिटल साधनों और स्मार्ट
+                        लर्निंग का उपयोग।
+                    </p>
+
+                </div>
+
+            </article>
+
 
         </div>
 
@@ -965,16 +1565,311 @@ footer h3{
 
 </section>
 
-<!-- GALLERY -->
-<section class="campus"
-         id="gallery">
+
+<!-- =========================
+     MORE FACILITIES
+========================= -->
+
+<section id="more-facilities"
+         class="section old-facilities">
 
     <div class="container">
+
 
         <div class="section-title">
 
             <span>
-                Our Campus
+                MORE FACILITIES
+            </span>
+
+            <h2>
+                School Facilities
+            </h2>
+
+            <p>
+                विद्यार्थियों के सीखने और
+                सर्वांगीण विकास के लिए
+                विद्यालय की अन्य सुविधाएँ।
+            </p>
+
+        </div>
+
+
+        <div class="cards">
+
+
+            <article class="card">
+
+                <div class="icon">
+                    📚
+                </div>
+
+                <h3>
+                    Library
+                </h3>
+
+                <p>
+                    विद्यार्थियों के लिए पढ़ने
+                    और सीखने की उपयोगी पुस्तकें
+                    एवं अध्ययन सामग्री।
+                </p>
+
+            </article>
+
+
+            <article class="card">
+
+                <div class="icon">
+                    💻
+                </div>
+
+                <h3>
+                    Computer
+                </h3>
+
+                <p>
+                    विद्यार्थियों के लिए
+                    computer-based learning
+                    और digital skills की सुविधा।
+                </p>
+
+            </article>
+
+
+            <article class="card">
+
+                <div class="icon">
+                    ⚽
+                </div>
+
+                <h3>
+                    Playground
+                </h3>
+
+                <p>
+                    खेल-कूद, sports और physical
+                    activities के लिए playground
+                    की सुविधा।
+                </p>
+
+            </article>
+
+
+            <article class="card">
+
+                <div class="icon">
+                    🎓
+                </div>
+
+                <h3>
+                    Nursery to 8th
+                </h3>
+
+                <p>
+                    Nursery से Class 8 तक
+                    विद्यार्थियों के लिए
+                    शिक्षा की सुविधा।
+                </p>
+
+            </article>
+
+
+            <article class="card">
+
+                <div class="icon">
+                    🩺
+                </div>
+
+                <h3>
+                    First Aid
+                </h3>
+
+                <p>
+                    विद्यार्थियों की आवश्यक
+                    सुरक्षा के लिए First Aid
+                    की सुविधा।
+                </p>
+
+            </article>
+
+
+            <article class="card">
+
+                <div class="icon">
+                    💧
+                </div>
+
+                <h3>
+                    Clean Drinking Water
+                </h3>
+
+                <p>
+                    विद्यार्थियों के लिए
+                    स्वच्छ एवं सुरक्षित
+                    पेयजल की व्यवस्था।
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ADMISSION
+========================= -->
+
+<section id="admission"
+         class="section admission">
+
+    <div class="container">
+
+
+        <div class="section-title">
+
+            <span>
+                ADMISSION ENQUIRY
+            </span>
+
+            <h2>
+                Admission Enquiry
+            </h2>
+
+            <p>
+                अपने बच्चे के उज्ज्वल भविष्य
+                की शुरुआत Drishti Public School
+                से करें।
+            </p>
+
+        </div>
+
+
+        <form class="admission-form"
+              onsubmit="sendEnquiry(event)">
+
+
+            <div class="form-grid">
+
+
+                <label>
+
+                    Student Name
+
+                    <input id="studentName"
+                           type="text"
+                           required
+                           placeholder="Enter student name">
+
+                </label>
+
+
+                <label>
+
+                    Parent / Guardian Name
+
+                    <input id="parentName"
+                           type="text"
+                           required
+                           placeholder="Enter parent name">
+
+                </label>
+
+
+                <label>
+
+                    Mobile Number
+
+                    <input id="mobile"
+                           type="tel"
+                           required
+                           placeholder="Enter mobile number">
+
+                </label>
+
+
+                <label>
+
+                    Class
+
+                    <select id="className"
+                            required>
+
+                        <option value="">
+                            Select class
+                        </option>
+
+                        <option>Nursery</option>
+                        <option>LKG</option>
+                        <option>UKG</option>
+                        <option>Class 1</option>
+                        <option>Class 2</option>
+                        <option>Class 3</option>
+                        <option>Class 4</option>
+                        <option>Class 5</option>
+                        <option>Class 6</option>
+                        <option>Class 7</option>
+                        <option>Class 8</option>
+
+                    </select>
+
+                </label>
+
+
+            </div>
+
+
+            <label>
+
+                Message / Enquiry
+
+                <textarea id="message"
+                          rows="4"
+                          placeholder="Write your enquiry"></textarea>
+
+            </label>
+
+
+            <button class="btn primary"
+                    type="submit">
+
+                📱 Send Enquiry on WhatsApp
+
+            </button>
+
+
+            <p class="form-note">
+
+                Your enquiry will open WhatsApp
+                with the school enquiry number.
+
+            </p>
+
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     GALLERY
+========================= -->
+
+<section id="gallery"
+         class="section alt">
+
+    <div class="container">
+
+
+        <div class="section-title">
+
+            <span>
+                OUR GALLERY
             </span>
 
             <h2>
@@ -982,29 +1877,34 @@ footer h3{
             </h2>
 
             <p>
-                हमारे विद्यालय के परिसर और learning environment
-                की झलक।
+                Explore our school campus,
+                classrooms and activities.
             </p>
 
         </div>
 
-        <div class="campus-grid">
 
-            <div class="campus-card">
+        <div class="gallery-grid">
+
+
+            <div class="gallery-card">
 
                 <img src="gate.jpg.jpg"
-                     alt="School Gate">
+                     alt="School Gate"
+                     loading="lazy">
 
                 <div>
-                    School Campus
+                    School Gate
                 </div>
 
             </div>
 
-            <div class="campus-card">
+
+            <div class="gallery-card">
 
                 <img src="playground.jpg.jpg"
-                     alt="School Playground">
+                     alt="School Playground"
+                     loading="lazy">
 
                 <div>
                     Playground
@@ -1012,10 +1912,12 @@ footer h3{
 
             </div>
 
-            <div class="campus-card">
+
+            <div class="gallery-card">
 
                 <img src="classroom.jpg.jpg"
-                     alt="School Classroom">
+                     alt="School Classroom"
+                     loading="lazy">
 
                 <div>
                     Classroom
@@ -1023,36 +1925,6 @@ footer h3{
 
             </div>
 
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ADMISSION -->
-<section class="admission"
-         id="admission">
-
-    <div class="container">
-
-        <div class="admission-box">
-
-            <h2>
-                Admission Enquiry
-            </h2>
-
-            <p>
-                अपने बच्चे के उज्ज्वल भविष्य की शुरुआत
-                Drishti Public School से करें।
-            </p>
-
-            <a class="btn btn-primary"
-               href="https://wa.me/919709767598?text=Hello%20Drishti%20Public%20School,%20I%20want%20to%20know%20about%20admission."
-               target="_blank">
-
-                💬 WhatsApp Admission Enquiry
-
-            </a>
 
         </div>
 
@@ -1060,15 +1932,21 @@ footer h3{
 
 </section>
 
-<!-- CONTACT -->
-<section id="contact">
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact"
+         class="section">
 
     <div class="container">
+
 
         <div class="section-title">
 
             <span>
-                Get In Touch
+                GET IN TOUCH
             </span>
 
             <h2>
@@ -1077,13 +1955,16 @@ footer h3{
 
         </div>
 
+
         <div class="contact-grid">
+
 
             <div class="contact-card">
 
                 <h3>
                     School Address
                 </h3>
+
 
                 <div class="contact-item">
 
@@ -1093,18 +1974,22 @@ footer h3{
 
                 </div>
 
+
                 <div class="contact-item">
 
                     📞 Principal:
+
                     <a href="tel:+918603116471">
                         8603116471
                     </a>
 
                 </div>
 
+
                 <div class="contact-item">
 
                     📞 Director:
+
                     <a href="tel:+919709767598">
                         9709767598
                     </a>
@@ -1113,11 +1998,13 @@ footer h3{
 
             </div>
 
+
             <div class="contact-card">
 
                 <h3>
                     School Leadership
                 </h3>
+
 
                 <div class="contact-item">
 
@@ -1131,6 +2018,7 @@ footer h3{
 
                 </div>
 
+
                 <div class="contact-item">
 
                     <strong>
@@ -1143,6 +2031,7 @@ footer h3{
 
                 </div>
 
+
                 <p style="margin-top:15px;">
 
                     <strong>
@@ -1153,18 +2042,28 @@ footer h3{
 
             </div>
 
+
         </div>
 
     </div>
 
 </section>
 
-<!-- FOOTER -->
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
 
     <div class="container">
 
+
         <div class="footer-grid">
+
 
             <div>
 
@@ -1183,6 +2082,7 @@ footer h3{
                 </p>
 
             </div>
+
 
             <div>
 
@@ -1203,8 +2103,8 @@ footer h3{
                 </p>
 
                 <p>
-                    <a href="#features">
-                        Features
+                    <a href="#facilities">
+                        Facilities
                     </a>
                 </p>
 
@@ -1215,6 +2115,7 @@ footer h3{
                 </p>
 
             </div>
+
 
             <div>
 
@@ -1236,7 +2137,9 @@ footer h3{
 
             </div>
 
+
         </div>
+
 
         <div class="footer-bottom">
 
@@ -1245,11 +2148,16 @@ footer h3{
 
         </div>
 
+
     </div>
 
 </footer>
 
-<!-- WHATSAPP -->
+
+<!-- =========================
+     WHATSAPP
+========================= -->
+
 <a class="whatsapp"
    href="https://wa.me/919709767598"
    target="_blank"
@@ -1259,28 +2167,91 @@ footer h3{
 
 </a>
 
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
 <script>
 
-function toggleMenu(){
+const menuButton =
+    document.getElementById("menuButton");
 
-    document.getElementById("nav")
-    .classList.toggle("show");
+const mainNav =
+    document.getElementById("mainNav");
 
-}
 
-document.querySelectorAll("#nav a")
+menuButton.addEventListener("click", function(){
+
+    mainNav.classList.toggle("active");
+
+    const isOpen =
+        mainNav.classList.contains("active");
+
+    menuButton.setAttribute(
+        "aria-expanded",
+        isOpen
+    );
+
+});
+
+
+document.querySelectorAll("#mainNav a")
 .forEach(function(link){
 
-    link.addEventListener("click",function(){
+    link.addEventListener("click", function(){
 
-        document.getElementById("nav")
-        .classList.remove("show");
+        mainNav.classList.remove("active");
+
+        menuButton.setAttribute(
+            "aria-expanded",
+            "false"
+        );
 
     });
 
 });
 
+
+function sendEnquiry(event){
+
+    event.preventDefault();
+
+    const student =
+        document.getElementById("studentName").value;
+
+    const parent =
+        document.getElementById("parentName").value;
+
+    const mobile =
+        document.getElementById("mobile").value;
+
+    const className =
+        document.getElementById("className").value;
+
+    const message =
+        document.getElementById("message").value;
+
+
+    const text =
+        "Hello Drishti Public School,%0A%0A" +
+        "Admission Enquiry%0A" +
+        "Student Name: " + encodeURIComponent(student) + "%0A" +
+        "Parent/Guardian: " + encodeURIComponent(parent) + "%0A" +
+        "Mobile: " + encodeURIComponent(mobile) + "%0A" +
+        "Class: " + encodeURIComponent(className) + "%0A" +
+        "Message: " + encodeURIComponent(message);
+
+
+    window.open(
+        "https://wa.me/919709767598?text=" + text,
+        "_blank"
+    );
+
+}
+
 </script>
+
 
 </body>
 </html>
