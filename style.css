@@ -1,3 +1,4 @@
+
 /* =========================================================
    DRISHTI PUBLIC SCHOOL
    Professional Responsive Style
@@ -1006,6 +1007,7 @@ button:focus-visible {
     outline-offset: 3px;
 }
 
+
 /* =========================================
    ADMISSION ENQUIRY FORM
    New styles only - preserve existing design
@@ -1142,5 +1144,52 @@ button:focus-visible {
     .admission-buttons .btn {
         width: 100%;
         max-width: 300px;
+    }
+}
+
+
+/* =========================================
+   LEADERSHIP WHATSAPP BUTTON
+   Only addition - preserve existing design
+   ========================================= */
+
+.leader-info .whatsapp-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 38px;
+    width: fit-content;
+    margin-top: 8px;
+    padding: 8px 13px;
+    border-radius: 10px;
+    background: #25D366;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.16);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.leader-info .whatsapp-button:hover {
+    background: #1eae54;
+    transform: translateY(-2px);
+    box-shadow: 0 11px 25px rgba(0, 0, 0, 0.22);
+}
+
+.leader-info .whatsapp-button:active {
+    transform: scale(0.97);
+}
+
+@media (max-width: 700px) {
+    .leader-info .whatsapp-button {
+        width: 100%;
+        min-height: 34px;
+        margin-top: 7px;
+        padding: 7px 8px;
+        font-size: 11px;
+        border-radius: 9px;
     }
 }
